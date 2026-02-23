@@ -89,12 +89,18 @@ const ProjectPage = ({ lang }) => {
             </div>
           ) : project.image ? (
             // Renderizamos la imagen o GIF
-            <div className="w-full flex justify-center bg-slate-900/40 rounded-2xl border border-slate-800 p-8 shadow-inner shadow-cyan-900/10 backdrop-blur-md">
+            <div className="w-full flex flex-col justify-center items-center bg-slate-900/40 rounded-2xl border border-slate-800 p-8 shadow-inner shadow-cyan-900/10 backdrop-blur-md">
               <img
                 src={project.image}
                 alt={`${project.title} demo`}
                 className="max-h-[654px] w-auto object-contain rounded-xl border border-slate-700/50 shadow-2xl"
               />
+              {project.imageCaption && (
+                <div className="mt-6 flex items-center justify-center gap-2 text-slate-400 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700/50">
+                  <Camera size={16} className="text-cyan-400" />
+                  <span className="text-sm font-mono">{project.imageCaption}</span>
+                </div>
+              )}
             </div>
           ) : (
             // Fallback si no hay dashboard ni imagen
@@ -164,6 +170,35 @@ const ProjectPage = ({ lang }) => {
                       </div>
                       <h4 className="text-slate-200 font-bold text-lg mb-2">{metric.label}</h4>
                       <p className="text-slate-400 text-sm leading-relaxed">{metric.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ---> EXPERIMENTAL RESULTS GALLERY <--- */}
+            {project.gallery && project.gallery.length > 0 && (
+              <div className="mt-16">
+                <div className="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                  <Camera className="text-purple-500" />
+                  <h3 className="text-2xl font-bold text-white font-['Space_Grotesk']">Experimental Results</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {project.gallery.map((img, idx) => (
+                    <div
+                      key={idx}
+                      className={`bg-slate-900/40 rounded-xl overflow-hidden border border-slate-800 shadow-lg group ${img.colSpan ? 'md:col-span-2' : ''}`}
+                    >
+                      <div className="overflow-hidden">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-4 bg-slate-900/80 border-t border-slate-800 backdrop-blur-sm">
+                        <p className="text-slate-300 text-sm font-mono text-center">{img.alt}</p>
+                      </div>
                     </div>
                   ))}
                 </div>

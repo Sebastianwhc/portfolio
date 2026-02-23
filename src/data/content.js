@@ -122,13 +122,31 @@ export const content = {
           dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjEzMDQ5OTUtNDFmNy00YTdhLWJkYjUtZjAzOWY5NTVjNTZmIiwidCI6ImY1N2E1OTQ5LTM3MzgtNDFlZi1hODZlLTAwNDkwYzA4Y2NiNSIsImMiOjR9"
         },
         {
-          id: "health-dashboards", // <--- ID AGREGADO
-          title: "Tableros de Gestión Hospitalaria",
+          id: "deep-learning-core",
+          title: "Deep Learning Neural Core (from scratch)",
           category: "data",
-          desc: "Sistema de dashboards interactivos para monitoreo de ocupación de camas, tiempos de espera y recursos críticos en tiempo real.",
-          tags: ["Power BI", "DAX", "Health Tech", "Analytics"],
+          desc: "Desarrollo completo del motor matemático de una Red Neuronal Profunda genérica (L-layers) programada desde cero utilizando exclusivamente Numpy puro, sin frameworks externos.",
+          tags: ["Python", "Numpy", "Deep Learning", "Mathematics", "Computer Vision"],
+          quickInsightDesc: "Construcción manual de Arquitectura Feedforward, Backpropagation y Funciones de Costo Multivariable.",
+          quickInsight: [
+            { icon: "Database", title: "Preparación", detail: "Clasificación logística inicial sobre Planar Data" },
+            { icon: "Cpu", title: "Motor Matemático", detail: "Forward/Back Propagation matricial (Numpy)" },
+            { icon: "Scan", title: "Aplicación Visual", detail: "Red de 4 Capas para clasificar 'Cat vs Non-Cat'" }
+          ],
+          metrics: [
+            { label: "Librerías Usadas", value: "0", desc: "Pipeline matricial puro (Ni TensorFlow ni Keras)" },
+            { label: "Capacidad", value: "L-Layers", desc: "Clase iterativa capaz de instanciar 'L' capas ocultas" },
+            { label: "Test Accuracy", value: "80%", desc: "Precisión alcanzada en el Dataset Cat vs Non-Cat" }
+          ],
+          image: '/images_projects/dl-cover.png',
+          imageCaption: 'Arquitectura de Red Neuronal Profunda L-Layer',
+          gallery: [
+            { src: '/images_projects/dl-cost.png', alt: 'Iteraciones vs Disminución de la Función de Costo (Gradient Descent)', colSpan: false },
+            { src: '/images_projects/dl-boundaries.png', alt: 'Mapeo de Fronteras de Decisión Coloreadas en Data 2D', colSpan: false },
+            { src: '/images_projects/dl-cat.jpg', alt: 'Test: Clasificación Visual "Cat vs Non-Cat"', colSpan: true }
+          ],
           links: [
-            { type: "demo", url: "#", label: "Ver Dashboard" }
+            { type: "github", url: "https://github.com/Sebastianwhc/Deep-Learning", label: "Ver Core Matemático" }
           ]
         },
         {
@@ -149,6 +167,7 @@ export const content = {
             { label: "Accesibilidad", value: "100%", desc: "Reconocimiento en tiempo real usando cualquier webcam estándar" }
           ],
           image: '/images_projects/lsc-demo.gif', // GIF 368x654 cargado
+          imageCaption: 'Detección de puntos de control (landmarks) en tiempo real',
           links: [
             { type: "github", url: "https://github.com/Sebastianwhc/DATA_SCIENCE_PROJECT_Colombian_Sign_Language_LSC_Recognition_with_AI", label: "Repo LSC" },
             { type: "demo", url: "#", label: "Ver Demo" } // Agrega tu URL del video/gif cuando lo tengas
@@ -156,71 +175,62 @@ export const content = {
         },
         // --- ROBOTICA & AERO ---
         {
-          id: "vtvl-rocket", // <--- ID AGREGADO
-          title: "Control de Cohete VTVL (Tesis)",
+          id: "rocket-6dof-control",
+          title: "Sistema de Control 6-DOF (Cohete)",
           category: "robotics",
-          desc: "Simulación y diseño del sistema de control para el aterrizaje y despegue vertical (VTVL) de un vehículo aéreo no tripulado tipo cohete.",
-          tags: ["Simulink", "Solidworks", "Control PID", "Flight Dynamics"],
+          desc: "Desarrollo y simulación del modelo matemático completo (6 Grados de Libertad) y algoritmos de control para la estabilización de vuelo de un cohete.",
+          tags: ["Mathematica", "Control Theory", "Non-linear Dynamics", "Simulink", "Aerospace"],
+          quickInsightDesc: "Derivación analítica y estabilización usando Ecuaciones de Newton-Euler",
+          quickInsight: [
+            { icon: "Plane", title: "Cinemática", detail: "Matrices de Rotación de Euler y Cuaterniones" },
+            { icon: "Activity", title: "Dinámica", detail: "Ecuación Newton-Euler y Momentos de Inercia" },
+            { icon: "Cpu", title: "Control Law", detail: "Control No Lineal para estabilización de 6 DOF" }
+          ],
+          metrics: [
+            { label: "Modelo Matemático", value: "6 DOF", desc: "X, Y, Z + Roll, Pitch, Yaw analíticos" },
+            { label: "Validación Fija", value: "Simulink", desc: "Pruebas Open Loop / Closed Loop de estabilidad" },
+            { label: "Diseño CAD", value: "SolidWorks", desc: "Geometría e inercia del vehículo importada" }
+          ],
+          image: '/images_projects/rocket-6dof.gif', // GIF 368x654 cargado
+          imageCaption: 'Simulación con SIMSCAPE MULTIBODY en Lazo Abierto',
+          gallery: [
+            { src: '/images_projects/rocket-traj.jpg', alt: 'Trayectoria 3D del VANT', colSpan: false },
+            { src: '/images_projects/rocket-response.jpg', alt: 'Respuesta Temporal del Controlador', colSpan: false }
+          ],
           links: [
-            { type: "video", url: "#", label: "Ver Simulación" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Modelos" }
-          ]
-        },
-        {
-          id: "drone-nav", // <--- ID AGREGADO
-          title: "Navegación Autónoma de Drones",
-          category: "robotics",
-          desc: "Sistema de navegación para UAVs usando fusión de sensores y algoritmos de control robusto. Validación en entorno virtual Gazebo.",
-          tags: ["ROS", "C++", "Gazebo", "Kalman Filter"],
-          links: [
-            { type: "video", url: "#", label: "Ver Video" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Código ROS" }
-          ]
-        },
-        {
-          id: "robotic-arm-vision", // <--- ID AGREGADO
-          title: "Visión Artificial en Brazo Robótico",
-          category: "robotics",
-          desc: "Brazo robótico capaz de clasificar objetos en tiempo real mediante visión por computadora (YOLO) y cinemática inversa.",
-          tags: ["Python", "OpenCV", "Arduino", "YOLO", "Kinematics"],
-          links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Repo Visión" }
+            { type: "github", url: "https://github.com/Sebastianwhc/Project-Control-of-6-DOF-of-Quadrotor-kind-Rocket", label: "Repo Simulación" }
           ]
         },
         // --- HARDWARE & CONTROL ---
         {
-          id: "greenhouse-auto", // <--- ID AGREGADO
-          title: "Automatización de Invernadero",
+          id: "hybrid-flight-controller",
+          title: "Hybrid Flight Controller (C++/ASM)",
           category: "hardware",
-          desc: "Sistema de control ambiental con Arduino. Monitoreo de variables, ajuste de Set Point y control PWM de ventiladores para regulación térmica.",
-          tags: ["Arduino", "C++", "Sensors", "PWM Control", "IoT"],
+          desc: "Diseño y programación bare-metal de un controlador de vuelo para Quadcopter usando una arquitectura de software estratégica: Assembly para el manejo de registros de interrupciones y C++ para el lazo de estabilización PID.",
+          tags: ["C++", "Assembly", "ATmega328P", "Flight Controller", "PID", "Hardware"],
+          quickInsightDesc: "Desarrollo desde cero operando sobre los registros del microcontrolador sin usar abstracciones ni librerías de vuelo comerciales.",
+          quickInsight: [
+            { icon: "Cpu", title: "Capa Bajo Nivel", detail: "Assembly: Generación PWM exacta y lectura UART" },
+            { icon: "Activity", title: "Capa Alto Nivel", detail: "C++: Lazo PID para estabilización de Quadcopter" },
+            { icon: "Plane", title: "Motor Mixing", detail: "Distribución algorítmica de potencia a 4 rotores" }
+          ],
+          metrics: [
+            { label: "Procesador Base", value: "ATmega328", desc: "Microcontrolador operando a frecuencias de bajo nivel" },
+            { label: "Software Overhead", value: "0%", desc: "100% código nativo para latencia nula (Real-Time)" },
+            { label: "Restricción ESC", value: "1000-2000", desc: "Ancho de pulso estricto garantizando la seguridad en vuelo" }
+          ],
+          image: '/images_projects/fc-demo.gif',
+          imageCaption: 'Vuelo de prueba de Controlador Assembly/C++',
+          gallery: [
+            { src: '/images_projects/fc-architecture.png', alt: 'Arquitectura Híbrida de Software', colSpan: false },
+            { src: '/images_projects/fc-motor-mixing.png', alt: 'Cálculo Matemático de Distribución de Potencia', colSpan: true },
+            { src: '/images_projects/fc-uart.png', alt: 'Assembly: Vector de Interrupciones UART', colSpan: false },
+            { src: '/images_projects/fc-timer.png', alt: 'Assembly: Configuración y Desborde de Timers 16-bit', colSpan: true }
+          ],
           links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Código Arduino" },
-            { type: "video", url: "#", label: "Ver Montaje" }
+            { type: "github", url: "https://github.com/Sebastianwhc", label: "Ver Source Code" }
           ]
         },
-        {
-          id: "assembly-projects", // <--- ID AGREGADO
-          title: "Proyectos en Assembly",
-          category: "hardware",
-          desc: "Implementación de algoritmos de bajo nivel y gestión directa de memoria y registros en microcontroladores.",
-          tags: ["Assembly", "Microcontrollers", "Low Level", "Optimization"],
-          links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Source Code" }
-          ]
-        },
-        // --- ACADEMICO & FISICA ---
-        {
-          id: "diff-eq-sim", // <--- ID AGREGADO
-          title: "Simulación de Ecuaciones Diferenciales",
-          category: "academic",
-          desc: "Modelado numérico y simulación computacional de sistemas físicos complejos mediante resolución de ecuaciones diferenciales.",
-          tags: ["Python", "NumPy", "Matplotlib", "Physics", "Calculus"],
-          links: [
-            { type: "demo", url: "#", label: "Ver Gráficas" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Notebook" }
-          ]
-        }
       ]
     },
     contact: {
@@ -349,13 +359,31 @@ export const content = {
           dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjEzMDQ5OTUtNDFmNy00YTdhLWJkYjUtZjAzOWY5NTVjNTZmIiwidCI6ImY1N2E1OTQ5LTM3MzgtNDFlZi1hODZlLTAwNDkwYzA4Y2NiNSIsImMiOjR9"
         },
         {
-          id: "health-dashboards",
-          title: "Healthcare Mgmt Dashboards",
+          id: "deep-learning-core",
+          title: "Deep Learning Neural Core (from scratch)",
           category: "data",
-          desc: "Interactive dashboard system for monitoring bed occupancy, wait times, and critical resources in real-time.",
-          tags: ["Power BI", "DAX", "Health Tech", "Analytics"],
+          desc: "Complete mathematical development of a generic Deep Neural Network (L-layers) programmed entirely from scratch using only pure Numpy, without external frameworks.",
+          tags: ["Python", "Numpy", "Deep Learning", "Mathematics", "Computer Vision"],
+          quickInsightDesc: "Manual construction of Feedforward Architecture, Backpropagation, and Multivariable Cost Functions.",
+          quickInsight: [
+            { icon: "Database", title: "Preparation", detail: "Initial logistic classification on Planar Data" },
+            { icon: "Cpu", title: "Math Engine", detail: "Matrix-based Forward/Back Propagation (Numpy)" },
+            { icon: "Scan", title: "Visual Application", detail: "4-Layer Network classifying 'Cat vs Non-Cat'" }
+          ],
+          metrics: [
+            { label: "Libraries Used", value: "0", desc: "Pure matrix pipeline (No TensorFlow or Keras)" },
+            { label: "Scalability", value: "L-Layers", desc: "Iterative class capable of instantiating 'L' hidden layers" },
+            { label: "Test Accuracy", value: "80%", desc: "Precision achieved on the Cat vs Non-Cat Dataset" }
+          ],
+          image: '/images_projects/dl-cover.png',
+          imageCaption: 'Deep Neural Network L-Layer Architecture',
+          gallery: [
+            { src: '/images_projects/dl-cost.png', alt: 'Iterations vs Cost Function Reduction (Gradient Descent)', colSpan: false },
+            { src: '/images_projects/dl-boundaries.png', alt: 'Colored Decision Boundaries Mapping in 2D Data', colSpan: false },
+            { src: '/images_projects/dl-cat.jpg', alt: 'Test: "Cat vs Non-Cat" Visual Classification', colSpan: true }
+          ],
           links: [
-            { type: "demo", url: "#", label: "View Dashboard" }
+            { type: "github", url: "https://github.com/Sebastianwhc/Deep-Learning", label: "View Math Core" }
           ]
         },
         {
@@ -376,75 +404,68 @@ export const content = {
             { label: "Accessibility", value: "100%", desc: "Real-time recognition using any standard webcam" }
           ],
           image: '/images_projects/lsc-demo.gif', // 368x654 GIF loaded
+          imageCaption: 'Real-time detection of hand control points (landmarks)',
           links: [
             { type: "github", url: "https://github.com/Sebastianwhc/DATA_SCIENCE_PROJECT_Colombian_Sign_Language_LSC_Recognition_with_AI", label: "LSC Repo" },
             { type: "demo", url: "#", label: "View Demo" } // Replace '#' with demo URL
           ]
         },
         {
-          id: "vtvl-rocket",
-          title: "VTVL Rocket Control (Thesis)",
+          id: "rocket-6dof-control",
+          title: "6-DOF Rocket Control System",
           category: "robotics",
-          desc: "Simulation and control system design for Vertical Takeoff and Vertical Landing (VTVL) of a rocket-type UAV.",
-          tags: ["Simulink", "Solidworks", "PID Control", "Flight Dynamics"],
+          desc: "Development and simulation of the complete mathematical model (6 Degrees of Freedom) and control algorithms for rocket flight stabilization.",
+          tags: ["Mathematica", "Control Theory", "Non-linear Dynamics", "Simulink", "Aerospace"],
+          quickInsightDesc: "Analytical derivation and stabilization using Newton-Euler equations",
+          quickInsight: [
+            { icon: "Plane", title: "Kinematics", detail: "Euler Rotation Matrices and Quaternions" },
+            { icon: "Activity", title: "Dynamics", detail: "Newton-Euler Equation & Moments of Inertia" },
+            { icon: "Cpu", title: "Control Law", detail: "Non-Linear Control for 6 DOF stabilization" }
+          ],
+          metrics: [
+            { label: "Mathematical Model", value: "6 DOF", desc: "X, Y, Z + Analytical Roll, Pitch, Yaw" },
+            { label: "System Validation", value: "Simulink", desc: "Open Loop / Closed Loop stability tests" },
+            { label: "CAD Design", value: "SolidWorks", desc: "Imported vehicle geometry and inertia" }
+          ],
+          image: '/images_projects/rocket-6dof.gif',
+          imageCaption: 'Open Loop Simulation over SIMSCAPE MULTIBODY',
+          gallery: [
+            { src: '/images_projects/rocket-traj.jpg', alt: 'UAV 3D Trajectory', colSpan: false },
+            { src: '/images_projects/rocket-response.jpg', alt: 'Controller Time Response', colSpan: false }
+          ],
           links: [
-            { type: "video", url: "#", label: "View Simulation" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Models" }
+            { type: "github", url: "https://github.com/Sebastianwhc/Project-Control-of-6-DOF-of-Quadrotor-kind-Rocket", label: "Simulation Repo" }
           ]
         },
         {
-          id: "drone-nav",
-          title: "Autonomous Drone Navigation",
-          category: "robotics",
-          desc: "UAV navigation system using sensor fusion and robust control algorithms. Validation in Gazebo virtual environment.",
-          tags: ["ROS", "C++", "Gazebo", "Kalman Filter"],
-          links: [
-            { type: "video", url: "#", label: "View Video" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "ROS Code" }
-          ]
-        },
-        {
-          id: "robotic-arm-vision",
-          title: "Robotic Arm Computer Vision",
-          category: "robotics",
-          desc: "Robotic arm capable of sorting objects in real-time using computer vision (YOLO) and inverse kinematics.",
-          tags: ["Python", "OpenCV", "Arduino", "YOLO", "Kinematics"],
-          links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Vision Repo" }
-          ]
-        },
-        {
-          id: "greenhouse-auto",
-          title: "Greenhouse Automation",
+          id: "hybrid-flight-controller",
+          title: "Hybrid Flight Controller (C++/ASM)",
           category: "hardware",
-          desc: "Environmental control system with Arduino. Variable monitoring, Set Point adjustment, and PWM fan control for thermal regulation.",
-          tags: ["Arduino", "C++", "Sensors", "PWM Control", "IoT"],
+          desc: "Bare-metal design and programming of a Quadcopter flight controller using a strategic dual-stack software architecture: Assembly for interrupt registers management and C++ for the PID stabilization loop.",
+          tags: ["C++", "Assembly", "ATmega328P", "Flight Controller", "PID", "Hardware"],
+          quickInsightDesc: "Scratch-built development operating directly on microcontroller registers without commercial flight abstractions.",
+          quickInsight: [
+            { icon: "Cpu", title: "Low Level Layer", detail: "Assembly: Precise PWM generation & UART reading" },
+            { icon: "Activity", title: "High Level Layer", detail: "C++: PID Loop for quadcopter stabilization" },
+            { icon: "Plane", title: "Motor Mixing", detail: "Algorithmic power distribution to 4 independent rotors" }
+          ],
+          metrics: [
+            { label: "Core Processor", value: "ATmega328", desc: "Microcontroller targeting low level frequencies" },
+            { label: "Software Overhead", value: "0%", desc: "100% native code enabling true zero-latency (Real-Time)" },
+            { label: "ESC Constraint", value: "1000-2000", desc: "Strict pulse width range ensuring flight safety" }
+          ],
+          image: '/images_projects/fc-demo.gif',
+          imageCaption: 'Assembly/C++ Controller Test Flight',
+          gallery: [
+            { src: '/images_projects/fc-architecture.png', alt: 'Hybrid Software Architecture', colSpan: false },
+            { src: '/images_projects/fc-motor-mixing.png', alt: 'Mathematical Power Distribution Calculation', colSpan: true },
+            { src: '/images_projects/fc-uart.png', alt: 'Assembly: UART Interrupt Vector Logic', colSpan: false },
+            { src: '/images_projects/fc-timer.png', alt: 'Assembly: 16-bit Hardware Timer Configuration', colSpan: true }
+          ],
           links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Arduino Code" },
-            { type: "video", url: "#", label: "View Setup" }
+            { type: "github", url: "https://github.com/Sebastianwhc", label: "View Source Code" }
           ]
         },
-        {
-          id: "assembly-projects",
-          title: "Assembly Projects",
-          category: "hardware",
-          desc: "Implementation of low-level algorithms and direct memory/register management on microcontrollers.",
-          tags: ["Assembly", "Microcontrollers", "Low Level", "Optimization"],
-          links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Source Code" }
-          ]
-        },
-        {
-          id: "diff-eq-sim",
-          title: "Differential Eq. Simulation",
-          category: "academic",
-          desc: "Numerical modeling and computational simulation of complex physical systems through differential equation solving.",
-          tags: ["Python", "NumPy", "Matplotlib", "Physics", "Calculus"],
-          links: [
-            { type: "demo", url: "#", label: "View Charts" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Notebook" }
-          ]
-        }
       ]
     },
     contact: {
@@ -572,13 +593,31 @@ export const content = {
           dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiNTBiODhiYjQtMTg3MC00NTE3LTkwNTItMDJjMWVmMmE4NWE2IiwidCI6ImY1N2E1OTQ5LTM3MzgtNDFlZi1hODZlLTAwNDkwYzA4Y2NiNSIsImMiOjR9"
         },
         {
-          id: "health-dashboards",
-          title: "Tableaux de Bord Santé",
+          id: "deep-learning-core",
+          title: "Deep Learning Neural Core (from scratch)",
           category: "data",
-          desc: "Système de tableaux de bord interactifs pour le suivi en temps réel de l'occupation des lits et des ressources critiques.",
-          tags: ["Power BI", "DAX", "Health Tech", "Analytics"],
+          desc: "Développement mathématique complet d'un Réseau de Neurones Profond générique (L-layers) programmé entièrement à partir de zéro en utilisant uniquement Numpy pur, sans frameworks externes.",
+          tags: ["Python", "Numpy", "Deep Learning", "Mathematics", "Computer Vision"],
+          quickInsightDesc: "Construction manuelle de l'Architecture Feedforward, de la Rétropropagation et des Fonctions de Coût Multivariables.",
+          quickInsight: [
+            { icon: "Database", title: "Préparation", detail: "Classification logistique initiale sur Planar Data" },
+            { icon: "Cpu", title: "Moteur Mathématique", detail: "Propagation avant/arrière matricielle (Numpy)" },
+            { icon: "Scan", title: "Application Visuelle", detail: "Réseau de 4 Couches classant 'Cat vs Non-Cat'" }
+          ],
+          metrics: [
+            { label: "Librairies Utilisées", value: "0", desc: "Pipeline matriciel pur (Ni TensorFlow ni Keras)" },
+            { label: "Capacité", value: "L-Layers", desc: "Classe itérative capable d'instancier 'L' couches cachées" },
+            { label: "Précision de Test", value: "80%", desc: "Précision atteinte sur le Dataset Cat vs Non-Cat" }
+          ],
+          image: '/images_projects/dl-cover.png',
+          imageCaption: 'Architecture de Réseau Neuronal Profond L-Layer',
+          gallery: [
+            { src: '/images_projects/dl-cost.png', alt: 'Itérations vs Réduction de la Fonction de Coût (Descente de Gradient)', colSpan: false },
+            { src: '/images_projects/dl-boundaries.png', alt: 'Cartographie des frontières de décision colorées (Dondes 2D)', colSpan: false },
+            { src: '/images_projects/dl-cat.jpg', alt: 'Test : Classification Visuelle "Cat vs Non-Cat"', colSpan: true }
+          ],
           links: [
-            { type: "demo", url: "#", label: "Voir Dashboard" }
+            { type: "github", url: "https://github.com/Sebastianwhc/Deep-Learning", label: "Voir Core Mathématique" }
           ]
         },
         {
@@ -599,75 +638,68 @@ export const content = {
             { label: "Accessibilité", value: "100%", desc: "Reconnaissance en temps réel via n'importe quelle webcam" }
           ],
           image: '/images_projects/lsc-demo.gif', // GIF 368x654 chargé
+          imageCaption: 'Détection en temps réel des points de contrôle (landmarks)',
           links: [
             { type: "github", url: "https://github.com/Sebastianwhc/DATA_SCIENCE_PROJECT_Colombian_Sign_Language_LSC_Recognition_with_AI", label: "Repo LSC" },
             { type: "demo", url: "#", label: "Voir Demo" } // Change '#' for a real demo
           ]
         },
         {
-          id: "vtvl-rocket",
-          title: "Contrôle Fusée VTVL (Thèse)",
+          id: "rocket-6dof-control",
+          title: "Contrôle de Fusée à 6 DDL",
           category: "robotics",
-          desc: "Simulation et conception du système de contrôle pour l'atterrissage et le décollage vertical (VTVL) d'un drone type fusée.",
-          tags: ["Simulink", "Solidworks", "PID Control", "Flight Dynamics"],
+          desc: "Développement et simulation du modèle mathématique complet (6 Degrés de Liberté) et des algorithmes de contrôle pour la stabilisation d'une fusée.",
+          tags: ["Mathematica", "Control Theory", "Non-linear Dynamics", "Simulink", "Aerospace"],
+          quickInsightDesc: "Dérivation analytique et stabilisation avec les Équations de Newton-Euler",
+          quickInsight: [
+            { icon: "Plane", title: "Cinématique", detail: "Matrices de Rotation d'Euler et Quaternions" },
+            { icon: "Activity", title: "Dynamique", detail: "Équations de Newton-Euler et Moments d'Inertie" },
+            { icon: "Cpu", title: "Loi de Contrôle", detail: "Contrôle non linéaire pour la stabilisation 6 DOF" }
+          ],
+          metrics: [
+            { label: "Modèle Mathématique", value: "6 DOF", desc: "X, Y, Z + Roulis, Tangage, Lacet analytiques" },
+            { label: "Validation Système", value: "Simulink", desc: "Tests de stabilité en boucle ouverte / fermée" },
+            { label: "Conception CAO", value: "SolidWorks", desc: "Géométrie et inertie du véhicule importées" }
+          ],
+          image: '/images_projects/rocket-6dof.gif',
+          imageCaption: 'Simulation en Boucle Ouverte avec SIMSCAPE MULTIBODY',
+          gallery: [
+            { src: '/images_projects/rocket-traj.jpg', alt: 'Trajectoire 3D du drone', colSpan: false },
+            { src: '/images_projects/rocket-response.jpg', alt: 'Réponse Temporelle du Contrôleur', colSpan: false }
+          ],
           links: [
-            { type: "video", url: "#", label: "Voir Simulation" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Modèles" }
+            { type: "github", url: "https://github.com/Sebastianwhc/Project-Control-of-6-DOF-of-Quadrotor-kind-Rocket", label: "Repo Simulation" }
           ]
         },
         {
-          id: "drone-nav",
-          title: "Navigation Autonome de Drone",
-          category: "robotics",
-          desc: "Système de navigation pour drones utilisant la fusion de capteurs et un contrôle robuste. Validation sous Gazebo.",
-          tags: ["ROS", "C++", "Gazebo", "Kalman Filter"],
-          links: [
-            { type: "video", url: "#", label: "Voir Vidéo" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Code ROS" }
-          ]
-        },
-        {
-          id: "robotic-arm-vision",
-          title: "Vision Artificielle Bras Robotique",
-          category: "robotics",
-          desc: "Bras robotique capable de trier des objets en temps réel grâce à la vision par ordinateur (YOLO) et à la cinématique inverse.",
-          tags: ["Python", "OpenCV", "Arduino", "YOLO"],
-          links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Repo Vision" }
-          ]
-        },
-        {
-          id: "greenhouse-auto",
-          title: "Automatisation de Serre",
+          id: "hybrid-flight-controller",
+          title: "Contrôleur de Vol Hybride (C++/ASM)",
           category: "hardware",
-          desc: "Système de contrôle environnemental avec Arduino. Surveillance des variables et contrôle PWM des ventilateurs.",
-          tags: ["Arduino", "C++", "Sensors", "PWM Control", "IoT"],
+          desc: "Conception et programmation \"bare-metal\" d'un contrôleur de vol pour Quadcopter utilisant une architecture logicielle double couche : Assembly pour la gestion des interruptions matérielles et C++ pour la boucle de stabilisation PID.",
+          tags: ["C++", "Assembly", "ATmega328P", "Flight Controller", "PID", "Hardware"],
+          quickInsightDesc: "Développement natif exploitant directement les registres du microcontrôleur sans bibliothèques commerciales.",
+          quickInsight: [
+            { icon: "Cpu", title: "Couche Bas Niveau", detail: "Assembly : Génération PWM et signaux UART" },
+            { icon: "Activity", title: "Couche Haut Niveau", detail: "C++ : Boucle PID pour la stabilisation spatiale" },
+            { icon: "Plane", title: "Motor Mixing", detail: "Répartition mathématique de la puissance sur 4 rotors" }
+          ],
+          metrics: [
+            { label: "Processeur de Base", value: "ATmega328", desc: "Microcontrôleur ciblant les fréquences d'horloge" },
+            { label: "Latence Logicielle", value: "0%", desc: "Code 100% natif pour une latence nulle (Temps Réel)" },
+            { label: "Sécurité ESC", value: "1000-2000", desc: "Spectre de signal strict garantissant la sécurité en vol" }
+          ],
+          image: '/images_projects/fc-demo.gif',
+          imageCaption: 'Vol test du contrôleur Assembly/C++',
+          gallery: [
+            { src: '/images_projects/fc-architecture.png', alt: 'Architecture Logicielle Hybride', colSpan: false },
+            { src: '/images_projects/fc-motor-mixing.png', alt: 'Calcul de Distribution de la Puissance', colSpan: true },
+            { src: '/images_projects/fc-uart.png', alt: 'Assembly : Logique du vecteur d\'interruption UART', colSpan: false },
+            { src: '/images_projects/fc-timer.png', alt: 'Assembly : Configuration des Timers Matériels 16 bits', colSpan: true }
+          ],
           links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Code Arduino" },
-            { type: "video", url: "#", label: "Voir Montage" }
+            { type: "github", url: "https://github.com/Sebastianwhc", label: "Voir Source Code" }
           ]
         },
-        {
-          id: "assembly-projects",
-          title: "Projets en Assembly",
-          category: "hardware",
-          desc: "Implémentation d'algorithmes bas niveau et gestion directe de la mémoire sur microcontrôleurs.",
-          tags: ["Assembly", "Microcontrollers", "Low Level", "Optimization"],
-          links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Source Code" }
-          ]
-        },
-        {
-          id: "diff-eq-sim",
-          title: "Simulation Éq. Différentielles",
-          category: "academic",
-          desc: "Modélisation numérique et simulation de systèmes physiques complexes par résolution d'équations différentielles.",
-          tags: ["Python", "NumPy", "Matplotlib", "Physics", "Calculus"],
-          links: [
-            { type: "demo", url: "#", label: "Voir Graphiques" },
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Notebook" }
-          ]
-        }
       ]
     },
     contact: {
