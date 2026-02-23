@@ -99,13 +99,27 @@ export const content = {
         // --- DATA & IA ---
         {
           id: "medical-data-infra", // <--- ID AGREGADO
-          title: "Infraestructura de Datos Médicos",
+          title: "Distribución de Cotizantes y Estructura Familiar",
           category: "data",
-          desc: "Arquitectura Cloud escalable en GCP para procesar datos clínicos masivos. Pipelines ETL automatizados para integración de historias clínicas y laboratorios.",
-          tags: ["GCP", "BigQuery", "SQL", "ETL", "Python"],
+          desc: "Arquitectura escalable en GCP para procesar datos de afiliados de una red de salud con 11 sedes en Santander. Construcción de pipelines ETL automatizados mediante eventos para integrar registros médicos y centralizar datos.",
+          tags: ["GCP", "BigQuery", "Python", "Pandas", "Event-Driven ETL"],
+          quickInsightDesc: "Los datos de afiliados varían constantemente. Este pipeline no es unidireccional; se retroalimenta cada mes para mantener actualizada la población, detectando nuevos núcleos familiares y actualizando estados vitales automáticamente.",
+          quickInsight: [
+            { icon: "Cloud", title: "Cloud Storage", detail: "Trigger por evento & Extracción de reportes crudos" },
+            { icon: "Cpu", title: "Python & Pandas", detail: "Cálculo de núcleos familiares y etapas de vida" },
+            { icon: "Database", title: "BigQuery", detail: "Consolidación y Single Source of Truth" },
+            { icon: "RefreshCcw", title: "Monthly Update", detail: "Retroalimentación cíclica de la población" }
+          ],
+          metrics: [
+            { label: "Tiempo de Procesamiento", value: "-85%", desc: "Reducción en la generación de reportes mensuales" },
+            { label: "Precisión de Datos", value: "99.9%", desc: "Consistencia en BigQuery vs fuentes manuales" },
+            { label: "Sedes Integradas", value: "11", desc: "Clínicas sincronizadas en tiempo real" }
+          ],
+          image: '/images_projects/image.png',
           links: [
             { type: "github", url: "https://github.com/Sebastianwhc", label: "Ver Código" }
-          ]
+          ],
+          dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjEzMDQ5OTUtNDFmNy00YTdhLWJkYjUtZjAzOWY5NTVjNTZmIiwidCI6ImY1N2E1OTQ5LTM3MzgtNDFlZi1hODZlLTAwNDkwYzA4Y2NiNSIsImMiOjR9"
         },
         {
           id: "health-dashboards", // <--- ID AGREGADO
@@ -118,14 +132,26 @@ export const content = {
           ]
         },
         {
-          id: "ai-sales-predictor", // <--- ID AGREGADO
-          title: "AI Sales Predictor",
+          id: "lsc-recognition-ai",
+          title: "Traductor Inteligente de LSC",
           category: "data",
-          desc: "Modelo de Inteligencia Artificial para estimar rendimiento comercial, analizando patrones complejos de ventas con redes neuronales.",
-          tags: ["Python", "Machine Learning", "Scikit-learn", "Pandas"],
+          desc: "Prototipo de Inteligencia Artificial para el reconocimiento en tiempo real del alfabeto estático de la Lengua de Señas Colombiana (LSC) mediante visión artificial.",
+          tags: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Keras"],
+          quickInsightDesc: "Procesamiento y clasificación de video frame-a-frame usando Redes Neuronales",
+          quickInsight: [
+            { icon: "Camera", title: "OpenCV", detail: "Captura de video en tiempo real" },
+            { icon: "Scan", title: "MediaPipe", detail: "Extracción 3D de 63 landmarks de la mano" },
+            { icon: "BrainCircuit", title: "Keras MLP", detail: "Clasificación tensorial de la seña" }
+          ],
+          metrics: [
+            { label: "Precisión Óptima", value: "55.5%", desc: "Generalización máxima en apenas 194 epochs sin overfitting" },
+            { label: "Datos Reducidos", value: "63 vars", desc: "De millones de píxeles a 63 coordenadas (Inferencias CPU)" },
+            { label: "Accesibilidad", value: "100%", desc: "Reconocimiento en tiempo real usando cualquier webcam estándar" }
+          ],
+          image: '/images_projects/lsc-demo.gif', // GIF 368x654 cargado
           links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Repo GitHub" },
-            { type: "demo", url: "#", label: "Demo Live" }
+            { type: "github", url: "https://github.com/Sebastianwhc/DATA_SCIENCE_PROJECT_Colombian_Sign_Language_LSC_Recognition_with_AI", label: "Repo LSC" },
+            { type: "demo", url: "#", label: "Ver Demo" } // Agrega tu URL del video/gif cuando lo tengas
           ]
         },
         // --- ROBOTICA & AERO ---
@@ -300,11 +326,23 @@ export const content = {
       items: [
         {
           id: "medical-data-infra",
-          title: "Medical Data Pipelines",
+          title: "Contributor Distribution & Family Structure",
           category: "data",
-          desc: "Scalable Cloud architecture on GCP to process massive clinical data. Automated ETL pipelines for integrating medical records and labs.",
-          tags: ["GCP", "BigQuery", "SQL", "ETL", "Python"],
-          image : '/images_projects/image.png',
+          desc: "Scalable cloud architecture on GCP to process affiliate data for a healthcare network with 11 branches in Santander. Engineered event-driven ETL pipelines to integrate medical records and centralize data.",
+          tags: ["GCP", "BigQuery", "Python", "Pandas", "Event-Driven ETL"],
+          quickInsightDesc: "Affiliate data fluctuates constantly. This pipeline isn't one-way; it feeds back every month to keep the population up to date, automatically detecting new family cores and updating life stages.",
+          quickInsight: [
+            { icon: "Cloud", title: "Cloud Storage", detail: "Event trigger & Raw report extraction" },
+            { icon: "Cpu", title: "Python & Pandas", detail: "Family core & life stage calculation" },
+            { icon: "Database", title: "BigQuery", detail: "Data consolidation & Single Source of Truth" },
+            { icon: "RefreshCcw", title: "Monthly Update", detail: "Cyclical population feedback loop" }
+          ],
+          metrics: [
+            { label: "Processing Time", value: "-85%", desc: "Reduction in monthly report generation" },
+            { label: "Data Accuracy", value: "99.9%", desc: "Consistency in BigQuery vs manual sources" },
+            { label: "Integrated Branches", value: "11", desc: "Clinics synchronized in real-time" }
+          ],
+          image: '/images_projects/image.png',
           links: [
             { type: "github", url: "https://github.com/Sebastianwhc", label: "View Code" }
           ],
@@ -321,14 +359,26 @@ export const content = {
           ]
         },
         {
-          id: "ai-sales-predictor",
-          title: "AI Sales Predictor",
+          id: "lsc-recognition-ai",
+          title: "LSC Smart Translator",
           category: "data",
-          desc: "Artificial Intelligence model developed to estimate commercial performance, analyzing complex sales patterns with neural networks.",
-          tags: ["Python", "Machine Learning", "Scikit-learn", "Pandas"],
+          desc: "Artificial Intelligence prototype for real-time recognition of the static alphabet of Colombian Sign Language (LSC) using computer vision.",
+          tags: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Keras"],
+          quickInsightDesc: "Frame-by-frame video processing and classification using Neural Networks",
+          quickInsight: [
+            { icon: "Camera", title: "OpenCV", detail: "Real-time video feed capture" },
+            { icon: "Scan", title: "MediaPipe", detail: "3D extraction of 63 hand landmarks" },
+            { icon: "BrainCircuit", title: "Keras MLP", detail: "Tensor classification of the sign" }
+          ],
+          metrics: [
+            { label: "Optimal Accuracy", value: "55.5%", desc: "Peak generalization reached at 194 epochs without overfitting" },
+            { label: "Data Reduction", value: "63 vars", desc: "From millions of pixels to 63 landmarks (CPU Inference)" },
+            { label: "Accessibility", value: "100%", desc: "Real-time recognition using any standard webcam" }
+          ],
+          image: '/images_projects/lsc-demo.gif', // 368x654 GIF loaded
           links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Repo GitHub" },
-            { type: "demo", url: "#", label: "Live Demo" }
+            { type: "github", url: "https://github.com/Sebastianwhc/DATA_SCIENCE_PROJECT_Colombian_Sign_Language_LSC_Recognition_with_AI", label: "LSC Repo" },
+            { type: "demo", url: "#", label: "View Demo" } // Replace '#' with demo URL
           ]
         },
         {
@@ -500,10 +550,22 @@ export const content = {
       items: [
         {
           id: "medical-data-infra",
-          title: "Pipelines de Données Médicales",
+          title: "Distribution des Cotisants et Structure Familiale",
           category: "data",
-          desc: "Architecture Cloud évolutive sur GCP. Pipelines ETL automatisés pour l'intégration de dossiers médicaux.",
-          tags: ["GCP", "BigQuery", "SQL", "ETL", "Python"],
+          desc: "Architecture cloud évolutive sur GCP pour traiter les données des affiliés d'un réseau de santé avec 11 succursales à Santander. Création de pipelines ETL basés sur des événements pour centraliser les données.",
+          tags: ["GCP", "BigQuery", "Python", "Pandas", "Event-Driven ETL"],
+          quickInsightDesc: "Les données des affiliés fluctuent constamment. Ce pipeline n'est pas unidirectionnel ; il se réalimente chaque mois pour maintenir la population à jour, détectant automatiquement de nouveaux noyaux familiaux et modifiant les étapes de vie.",
+          quickInsight: [
+            { icon: "Cloud", title: "Cloud Storage", detail: "Déclencheur d'événement et extraction brute" },
+            { icon: "Cpu", title: "Python & Pandas", detail: "Calcul des noyaux familiaux et étapes de vie" },
+            { icon: "Database", title: "BigQuery", detail: "Consolidation et Source Unique de Vérité" },
+            { icon: "RefreshCcw", title: "Mise à Jour Mensuelle", detail: "Boucle de rétroaction cyclique de la population" }
+          ],
+          metrics: [
+            { label: "Temps de Traitement", value: "-85%", desc: "Réduction de la génération du rapport mensuel" },
+            { label: "Précision des Données", value: "99.9%", desc: "Cohérence BigQuery vs sources manuelles" },
+            { label: "Succursales Intégrées", value: "11", desc: "Cliniques synchronisées en temps réel" }
+          ],
           links: [
             { type: "github", url: "https://github.com/Sebastianwhc", label: "Voir Code" }
           ],
@@ -520,14 +582,26 @@ export const content = {
           ]
         },
         {
-          id: "ai-sales-predictor",
-          title: "AI Sales Predictor",
+          id: "lsc-recognition-ai",
+          title: "Traducteur IA LSC",
           category: "data",
-          desc: "Modèle d'IA pour estimer la performance commerciale, analysant des modèles de vente complexes avec des réseaux neuronaux.",
-          tags: ["Python", "Machine Learning", "Scikit-learn", "Pandas"],
+          desc: "Prototype d'Intelligence Artificielle pour la reconnaissance en temps réel de l'alphabet statique de la Langue des Signes Colombienne (LSC) par vision par ordinateur.",
+          tags: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Keras"],
+          quickInsightDesc: "Traitement et classification de la vidéo image par image avec Réseaux Neuronaux",
+          quickInsight: [
+            { icon: "Camera", title: "OpenCV", detail: "Capture de flux vidéo en direct" },
+            { icon: "Scan", title: "MediaPipe", detail: "Extraction 3D de 63 points de la main" },
+            { icon: "BrainCircuit", title: "Keras MLP", detail: "Classification tensorielle du signe" }
+          ],
+          metrics: [
+            { label: "Précision Optimale", value: "55.5%", desc: "Généralisation maximale à 194 epochs sans surajustement" },
+            { label: "Données Réduites", value: "63 vars", desc: "De millions de pixels à 63 repères 3D (Inférence CPU)" },
+            { label: "Accessibilité", value: "100%", desc: "Reconnaissance en temps réel via n'importe quelle webcam" }
+          ],
+          image: '/images_projects/lsc-demo.gif', // GIF 368x654 chargé
           links: [
-            { type: "github", url: "https://github.com/Sebastianwhc", label: "Repo GitHub" },
-            { type: "demo", url: "#", label: "Demo Live" }
+            { type: "github", url: "https://github.com/Sebastianwhc/DATA_SCIENCE_PROJECT_Colombian_Sign_Language_LSC_Recognition_with_AI", label: "Repo LSC" },
+            { type: "demo", url: "#", label: "Voir Demo" } // Change '#' for a real demo
           ]
         },
         {
