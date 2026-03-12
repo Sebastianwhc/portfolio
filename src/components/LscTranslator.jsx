@@ -16,14 +16,19 @@ const LscTranslator = () => {
   const [isModelLoading, setIsModelLoading] = useState(true);
   const [isCameraReady, setIsCameraReady] = useState(false);
 
+  const [errorMsg, setErrorMsg] = useState(null);
+
   useEffect(() => {
     const loadModel = async () => {
       try {
-        const loadedModel = await tf.loadLayersModel('/lsc-model/model.json');
+        // The Keras model was converted via SavedModel, resulting in a GraphModel structure.
+        const loadedModel = await tf.loadGraphModel('/lsc-model/model.json');
         setModel(loadedModel);
         setIsModelLoading(false);
       } catch (err) {
         console.error("Error loading TFJS model:", err);
+        setErrorMsg("Failed to load AI model. Check console.");
+        setIsModelLoading(false);
       }
     };
     loadModel();
