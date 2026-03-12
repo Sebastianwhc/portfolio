@@ -13,6 +13,7 @@ const iconMap = {
   BrainCircuit
 };
 import { content } from './data/content';
+import LscTranslator from './components/LscTranslator';
 
 const ProjectPage = ({ lang }) => {
   const { id } = useParams();
@@ -85,6 +86,25 @@ const ProjectPage = ({ lang }) => {
                   scrolling="no"
                   allowFullScreen={true}>
                 </iframe>
+              </div>
+            </div>
+          ) : project.id === 'lsc-recognition-ai' ? (
+            <div className="grid lg:grid-cols-2 gap-8 items-center bg-slate-900/40 rounded-2xl border border-slate-800 p-8 shadow-inner shadow-cyan-900/10 backdrop-blur-md">
+              <div className="flex flex-col h-full justify-center">
+                <LscTranslator />
+              </div>
+              <div className="flex flex-col h-full justify-center items-center">
+                <img
+                  src={project.image}
+                  alt={`${project.title} original demo`}
+                  className="max-h-[550px] w-auto object-contain rounded-xl border border-slate-700/50 shadow-2xl"
+                />
+                {project.imageCaption && (
+                  <div className="mt-6 flex items-center justify-center gap-2 text-slate-400 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700/50">
+                    <Camera size={16} className="text-cyan-400" />
+                    <span className="text-sm font-mono">{project.imageCaption}</span>
+                  </div>
+                )}
               </div>
             </div>
           ) : project.image ? (
