@@ -14,6 +14,7 @@ const iconMap = {
 };
 import { content } from './data/content';
 import LscTranslator from './components/LscTranslator';
+import DlPlayground from './components/DlPlayground';
 
 const ProjectPage = ({ lang }) => {
   const { id } = useParams();
@@ -88,6 +89,8 @@ const ProjectPage = ({ lang }) => {
                 </iframe>
               </div>
             </div>
+          ) : project.id === 'deep-learning-core' ? (
+            <DlPlayground />
           ) : project.id === 'lsc-recognition-ai' ? (
             <div className="grid lg:grid-cols-2 gap-8 items-center bg-slate-900/40 rounded-2xl border border-slate-800 p-8 shadow-inner shadow-cyan-900/10 backdrop-blur-md">
               <div className="flex flex-col h-full justify-center">
