@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Github, ExternalLink, PlayCircle, BarChart3, Database, Cloud, Cpu, ArrowRight, ArrowDown, RefreshCcw, Camera, Scan, BrainCircuit } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, PlayCircle, BarChart3, Database, Cloud, Cpu, ArrowRight, ArrowDown, RefreshCcw, Camera, Scan, BrainCircuit, Globe, Activity, Zap, MapPin } from 'lucide-react';
 
 const iconMap = {
   Cloud,
@@ -10,7 +10,11 @@ const iconMap = {
   RefreshCcw,
   Camera,
   Scan,
-  BrainCircuit
+  BrainCircuit,
+  Globe,
+  Activity,
+  Zap,
+  MapPin
 };
 import { content } from './data/content';
 import LscTranslator from './components/LscTranslator';

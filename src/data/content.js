@@ -98,6 +98,35 @@ export const content = {
       items: [
         // --- DATA & IA ---
         {
+          id: "ecosalud-ia",
+          title: "EcoSalud IA — Simulador Predictivo de Dengue",
+          category: "data",
+          desc: "Plataforma web con IA en el navegador que anticipa la evolución del dengue comuna por comuna en el Área Metropolitana de Bucaramanga. Modelo Gradient Boosting exportado a ONNX (372 KB) corriendo 100% en WebAssembly, sin backend. Concurso nacional Datos al Ecosistema 2026.",
+          tags: ["React", "TypeScript", "Python", "ONNX", "scikit-learn", "ECharts", "Vite", "WebAssembly"],
+          quickInsightDesc: "Pipeline completo: datos abiertos → modelo ML entrenado en Python → exportación ONNX → inferencia autoregresiva recursiva en el navegador → recomendaciones de control vectorial + impacto económico en COP.",
+          quickInsight: [
+            { icon: "Database", title: "Pipelines Python", detail: "28.626 casos SIVIGILA + clima IDEAM/CDMB → tabla 10.267 filas (16 features)" },
+            { icon: "BrainCircuit", title: "Modelo IA", detail: "GradientBoosting → ONNX 372 KB (R² = 0.571 en brote 2024)" },
+            { icon: "Globe", title: "Inferencia Browser", detail: "onnxruntime-web (WASM CPU) — pronóstico 16 semanas, offline" },
+            { icon: "MapPin", title: "Acción + Impacto", detail: "Alerta por comuna + ahorro potencial $1.600–$4.800M COP/año" }
+          ],
+          metrics: [
+            { label: "R² Validación Brote", value: "0.571", desc: "Split temporal honesto: train ≤ 2023, test brote 2024–2025 (baseline R² = −0.36)" },
+            { label: "Modelo en Browser", value: "372 KB", desc: "ONNX + WebAssembly (CPU), sin servidor, funciona offline" },
+            { label: "Ahorro Potencial", value: "$4.800M", desc: "COP/año con acción temprana (30% reducción de casos en brote)" }
+          ],
+          image: '/images_projects/ecosalud-cover.png',
+          imageCaption: 'Simulador predictivo de dengue — Mapa de riesgo por comuna',
+          gallery: [
+            { src: '/images_projects/ecosalud-dashboard.png', alt: 'Dashboard histórico: Canal endémico, pirámide y mapas ECharts', colSpan: true },
+            { src: '/images_projects/ecosalud-simulator.png', alt: 'Simulador: Mapa de riesgo + sliders de clima + pronóstico 16 semanas', colSpan: true }
+          ],
+          links: [
+            { type: "demo", url: "https://concursodatos.vercel.app", label: "Ver Demo en Vivo" },
+            { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "Repo GitHub" }
+          ]
+        },
+        {
           id: "medical-data-infra", // <--- ID AGREGADO
           title: "Distribución de Cotizantes y Estructura Familiar",
           category: "data",
@@ -335,6 +364,35 @@ export const content = {
       filterLabels: { all: "All", data: "Data & AI", robotics: "Robotics & Aero", hardware: "Hardware & Control", academic: "Academic & Physics" },
       items: [
         {
+          id: "ecosalud-ia",
+          title: "EcoSalud IA — Dengue Prediction Simulator",
+          category: "data",
+          desc: "Web platform with in-browser AI that forecasts dengue evolution district by district across the Bucaramanga Metropolitan Area (Colombia). Gradient Boosting model exported to ONNX (372 KB) running 100% in WebAssembly, no backend. Built for Colombia's national Datos al Ecosistema 2026 competition.",
+          tags: ["React", "TypeScript", "Python", "ONNX", "scikit-learn", "ECharts", "Vite", "WebAssembly"],
+          quickInsightDesc: "Full pipeline: open data → ML model trained in Python → ONNX export → recursive autoregressive inference in the browser → prioritized vector control recommendations + economic impact in COP.",
+          quickInsight: [
+            { icon: "Database", title: "Python Pipelines", detail: "28,626 SIVIGILA cases + IDEAM/CDMB climate → 10,267-row table (16 features)" },
+            { icon: "BrainCircuit", title: "AI Model", detail: "GradientBoosting → ONNX 372 KB (R² = 0.571 on 2024 outbreak)" },
+            { icon: "Globe", title: "Browser Inference", detail: "onnxruntime-web (WASM CPU) — 16-week forecast, works offline" },
+            { icon: "MapPin", title: "Action + Impact", detail: "District-level alerts + potential savings $400K–$1.2M USD/year" }
+          ],
+          metrics: [
+            { label: "R² Outbreak Validation", value: "0.571", desc: "Honest temporal split: train ≤ 2023, test on 2024–2025 outbreak (baseline R² = −0.36)" },
+            { label: "In-Browser Model", value: "372 KB", desc: "ONNX + WebAssembly (CPU), no server, works offline" },
+            { label: "Potential Savings", value: "$1.2M", desc: "USD/year with early action (30% case reduction during outbreak)" }
+          ],
+          image: '/images_projects/ecosalud-cover.png',
+          imageCaption: 'Dengue prediction simulator — District-level risk map',
+          gallery: [
+            { src: '/images_projects/ecosalud-dashboard.png', alt: 'Historical dashboard: Endemic channel, pyramid and ECharts maps', colSpan: true },
+            { src: '/images_projects/ecosalud-simulator.png', alt: 'Simulator: Risk map + climate sliders + 16-week forecast', colSpan: true }
+          ],
+          links: [
+            { type: "demo", url: "https://concursodatos.vercel.app", label: "Live Demo" },
+            { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "GitHub Repo" }
+          ]
+        },
+        {
           id: "medical-data-infra",
           title: "Contributor Distribution & Family Structure",
           category: "data",
@@ -569,6 +627,35 @@ export const content = {
       title: "Projets",
       filterLabels: { all: "Tous", data: "Data & IA", robotics: "Robotique & Aéro", hardware: "Matériel & Control", academic: "Académique" },
       items: [
+        {
+          id: "ecosalud-ia",
+          title: "EcoSalud IA — Simulateur Prédictif de Dengue",
+          category: "data",
+          desc: "Plateforme web avec IA embarquée dans le navigateur qui anticipe l'évolution de la dengue quartier par quartier dans la Zone Métropolitaine de Bucaramanga (Colombie). Modèle Gradient Boosting exporté en ONNX (372 Ko) exécuté à 100% en WebAssembly, sans backend. Concours national Datos al Ecosistema 2026.",
+          tags: ["React", "TypeScript", "Python", "ONNX", "scikit-learn", "ECharts", "Vite", "WebAssembly"],
+          quickInsightDesc: "Pipeline complet : données ouvertes → modèle ML entraîné en Python → export ONNX → inférence autorégressive récursive dans le navigateur → recommandations de contrôle vectoriel + impact économique en COP.",
+          quickInsight: [
+            { icon: "Database", title: "Pipelines Python", detail: "28 626 cas SIVIGILA + climat IDEAM/CDMB → table 10 267 lignes (16 features)" },
+            { icon: "BrainCircuit", title: "Modèle IA", detail: "GradientBoosting → ONNX 372 Ko (R² = 0,571 sur l'épidémie 2024)" },
+            { icon: "Globe", title: "Inférence Navigateur", detail: "onnxruntime-web (WASM CPU) — prévision 16 semaines, hors ligne" },
+            { icon: "MapPin", title: "Action + Impact", detail: "Alertes par quartier + économies potentielles 400K–1,2M USD/an" }
+          ],
+          metrics: [
+            { label: "R² Validation Épidémie", value: "0,571", desc: "Partition temporelle honnête : train ≤ 2023, test épidémie 2024–2025 (baseline R² = −0,36)" },
+            { label: "Modèle dans le Navigateur", value: "372 Ko", desc: "ONNX + WebAssembly (CPU), sans serveur, fonctionne hors ligne" },
+            { label: "Économies Potentielles", value: "$1,2M", desc: "USD/an avec action précoce (30% de réduction des cas lors d'épidémie)" }
+          ],
+          image: '/images_projects/ecosalud-cover.png',
+          imageCaption: 'Simulateur prédictif de dengue — Carte de risque par quartier',
+          gallery: [
+            { src: '/images_projects/ecosalud-dashboard.png', alt: 'Dashboard historique : Canal endémique, pyramide et cartes ECharts', colSpan: true },
+            { src: '/images_projects/ecosalud-simulator.png', alt: 'Simulateur : Carte de risque + curseurs climat + prévision 16 semaines', colSpan: true }
+          ],
+          links: [
+            { type: "demo", url: "https://concursodatos.vercel.app", label: "Démo en Direct" },
+            { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "Repo GitHub" }
+          ]
+        },
         {
           id: "medical-data-infra",
           title: "Distribution des Cotisants et Structure Familiale",
