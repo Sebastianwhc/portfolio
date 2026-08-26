@@ -117,10 +117,7 @@ export const content = {
           ],
           image: '/images_projects/ecosalud-cover.png',
           imageCaption: 'Simulador predictivo de dengue — Mapa de riesgo por comuna',
-          gallery: [
-            { src: '/images_projects/ecosalud-dashboard.png', alt: 'Dashboard histórico: Canal endémico, pirámide y mapas ECharts', colSpan: true },
-            { src: '/images_projects/ecosalud-simulator.png', alt: 'Simulador: Mapa de riesgo + sliders de clima + pronóstico 16 semanas', colSpan: true }
-          ],
+
           links: [
             { type: "demo", url: "https://concursodatos.vercel.app", label: "Ver Demo en Vivo" },
             { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "Repo GitHub" }
@@ -383,10 +380,7 @@ export const content = {
           ],
           image: '/images_projects/ecosalud-cover.png',
           imageCaption: 'Dengue prediction simulator — District-level risk map',
-          gallery: [
-            { src: '/images_projects/ecosalud-dashboard.png', alt: 'Historical dashboard: Endemic channel, pyramid and ECharts maps', colSpan: true },
-            { src: '/images_projects/ecosalud-simulator.png', alt: 'Simulator: Risk map + climate sliders + 16-week forecast', colSpan: true }
-          ],
+
           links: [
             { type: "demo", url: "https://concursodatos.vercel.app", label: "Live Demo" },
             { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "GitHub Repo" }
@@ -647,10 +641,7 @@ export const content = {
           ],
           image: '/images_projects/ecosalud-cover.png',
           imageCaption: 'Simulateur prédictif de dengue — Carte de risque par quartier',
-          gallery: [
-            { src: '/images_projects/ecosalud-dashboard.png', alt: 'Dashboard historique : Canal endémique, pyramide et cartes ECharts', colSpan: true },
-            { src: '/images_projects/ecosalud-simulator.png', alt: 'Simulateur : Carte de risque + curseurs climat + prévision 16 semaines', colSpan: true }
-          ],
+
           links: [
             { type: "demo", url: "https://concursodatos.vercel.app", label: "Démo en Direct" },
             { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "Repo GitHub" }
