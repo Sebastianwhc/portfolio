@@ -638,9 +638,33 @@ const Home = ({ lang, setLang }) => {
                   {/* CONTENIDO DERECHO */}
                   <div className="md:w-2/3 p-8 relative z-10 flex flex-col justify-center" style={{ backgroundColor: '#0a0a15' }}>
                     <h3 className="text-2xl font-bold mb-3" style={{ color: 'white', fontFamily: '"Space Grotesk", sans-serif' }}>{proj.title}</h3>
-                    <p className="text-sm mb-6 leading-relaxed" style={{ color: '#94a3b8' }}>
+                    <p className="text-sm mb-4 leading-relaxed" style={{ color: '#94a3b8' }}>
                       {proj.desc}
                     </p>
+
+                    {/* MINI TECH STACK BAR */}
+                    {proj.techStack && (
+                      <div className="mb-4 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80">
+                        <div className="flex justify-between items-center text-[10px] font-mono mb-1.5">
+                          <span className="text-slate-400 font-semibold truncate pr-2">
+                            {proj.techStack.map(t => t.name.split(" ")[0]).join(" / ")}
+                          </span>
+                          <span className="text-cyan-400 font-bold shrink-0">
+                            {proj.techStack.map(t => t.percentage + "%").join(" · ")}
+                          </span>
+                        </div>
+                        <div className="w-full h-1.5 rounded-full overflow-hidden flex bg-slate-800/80">
+                          {proj.techStack.map((tech, tIdx) => (
+                            <div
+                              key={tIdx}
+                              style={{ width: tech.percentage + "%" }}
+                              className={"h-full bg-gradient-to-r " + tech.color}
+                              title={tech.name + ": " + tech.percentage + "%"}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
                     <div className="flex flex-wrap gap-2 mb-6">
                       {proj.tags.map(tag => (

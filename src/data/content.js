@@ -103,6 +103,12 @@ export const content = {
           category: "data",
           desc: "Plataforma web con IA en el navegador que anticipa la evolución del dengue comuna por comuna en el Área Metropolitana de Bucaramanga. Modelo Gradient Boosting exportado a ONNX (372 KB) corriendo 100% en WebAssembly, sin backend. Concurso nacional Datos al Ecosistema 2026.",
           tags: ["React", "TypeScript", "Python", "ONNX", "scikit-learn", "ECharts", "Vite", "WebAssembly"],
+          techStack: [
+            { name: "React & TypeScript", percentage: 40, color: "from-cyan-500 to-blue-500", role: "Arquitectura SPA reactiva, interfaz interactiva, estado con Zustand y soporte bilingüe" },
+            { name: "Python & scikit-learn", percentage: 30, color: "from-blue-500 to-indigo-500", role: "Pipelines ETL de datos SIVIGILA/IDEAM, ingeniería de features y entrenamiento Gradient Boosting" },
+            { name: "ONNX & WebAssembly", percentage: 20, color: "from-purple-500 to-pink-500", role: "Inferencia autoregresiva recursiva 100% en cliente (CPU WASM), sin latencia ni servidor" },
+            { name: "Apache ECharts & GeoJSON", percentage: 10, color: "from-amber-500 to-orange-500", role: "Visualización de mapas coropléticos por comuna, canal endémico y pirámides demográficas" },
+          ],
           quickInsightDesc: "Pipeline completo: datos abiertos → modelo ML entrenado en Python → exportación ONNX → inferencia autoregresiva recursiva en el navegador → recomendaciones de control vectorial + impacto económico en COP.",
           quickInsight: [
             { icon: "Database", title: "Pipelines Python", detail: "28.626 casos SIVIGILA + clima IDEAM/CDMB → tabla 10.267 filas (16 features)" },
@@ -133,6 +139,12 @@ export const content = {
           category: "data",
           desc: "Arquitectura escalable en GCP para procesar datos de afiliados de una red de salud con 11 sedes en Santander. Construcción de pipelines ETL automatizados mediante eventos para integrar registros médicos y centralizar datos.",
           tags: ["GCP", "BigQuery", "Python", "Pandas", "Event-Driven ETL"],
+          techStack: [
+            { name: "Python & Pandas", percentage: 40, color: "from-blue-500 to-cyan-500", role: "Limpieza y normalización, detección de núcleos familiares y categorización de etapas vitales" },
+            { name: "Google BigQuery & SQL", percentage: 30, color: "from-indigo-500 to-blue-600", role: "Modelado columnar, consultas analíticas optimizadas y consolidación como Single Source of Truth" },
+            { name: "Google Cloud Platform (GCP)", percentage: 20, color: "from-emerald-500 to-teal-500", role: "Cloud Storage, Cloud Functions con arquitectura Event-Driven y pipelines automatizados" },
+            { name: "Power BI & Analytics", percentage: 10, color: "from-amber-500 to-orange-500", role: "Dashboards ejecutivos con DAX y Power Query para seguimiento poblacional" },
+          ],
           quickInsightDesc: "Los datos de afiliados varían constantemente. Este pipeline no es unidireccional; se retroalimenta cada mes para mantener actualizada la población, detectando nuevos núcleos familiares y actualizando estados vitales automáticamente.",
           quickInsight: [
             { icon: "Cloud", title: "Cloud Storage", detail: "Trigger por evento & Extracción de reportes crudos" },
@@ -157,6 +169,12 @@ export const content = {
           category: "data",
           desc: "Desarrollo completo del motor matemático de una Red Neuronal Profunda genérica (L-layers) programada desde cero utilizando exclusivamente Numpy puro, sin frameworks externos.",
           tags: ["Python", "Numpy", "Deep Learning", "Mathematics", "Computer Vision"],
+          techStack: [
+            { name: "Python & NumPy Vectorizado", percentage: 45, color: "from-blue-500 to-indigo-500", role: "Álgebra lineal vectorizada y operaciones matriciales implementadas desde cero" },
+            { name: "Backprop & Arquitectura Neuronal", percentage: 30, color: "from-purple-500 to-pink-500", role: "Derivación analítica de gradientes, optimizadores (Adam, RMSprop, SGD) y capas modulares" },
+            { name: "Teoría ML & Regularización", percentage: 15, color: "from-cyan-500 to-teal-500", role: "L2 Regularization, Dropout estocástico, inicialización He/Xavier y validación cruzada" },
+            { name: "Matplotlib & Visualización", percentage: 10, color: "from-amber-500 to-orange-500", role: "Graficación de fronteras de decisión 2D coloreadas y superficies de convergencia de costo" },
+          ],
           quickInsightDesc: "Construcción manual de Arquitectura Feedforward, Backpropagation y Funciones de Costo Multivariable.",
           quickInsight: [
             { icon: "Database", title: "Preparación", detail: "Clasificación logística inicial sobre Planar Data" },
@@ -185,6 +203,12 @@ export const content = {
           category: "data",
           desc: "Prototipo de Inteligencia Artificial para el reconocimiento en tiempo real del alfabeto estático de la Lengua de Señas Colombiana (LSC) mediante visión artificial.",
           tags: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Keras"],
+          techStack: [
+            { name: "TensorFlow & Keras (LSTM)", percentage: 40, color: "from-orange-500 to-red-500", role: "Redes neuronales recurrentes para capturar dependencias temporales en señas dinámicas" },
+            { name: "Python & OpenCV", percentage: 30, color: "from-blue-500 to-cyan-500", role: "Captura de video en tiempo real, normalización espacial y aumentación de datos gestuales" },
+            { name: "MediaPipe Hands & Pose", percentage: 20, color: "from-teal-500 to-emerald-500", role: "Extracción 3D en tiempo real de 21 coordenadas de landmarks manuales por fotograma" },
+            { name: "JavaScript & Web Demo", percentage: 10, color: "from-yellow-500 to-amber-500", role: "Integración interactiva con la cámara web en el navegador para traducción en vivo" },
+          ],
           quickInsightDesc: "Procesamiento y clasificación de video frame-a-frame usando Redes Neuronales",
           quickInsight: [
             { icon: "Camera", title: "OpenCV", detail: "Captura de video en tiempo real" },
@@ -210,6 +234,12 @@ export const content = {
           category: "robotics",
           desc: "Desarrollo y simulación del modelo matemático completo (6 Grados de Libertad) y algoritmos de control para la estabilización de vuelo de un cohete.",
           tags: ["Mathematica", "Control Theory", "Non-linear Dynamics", "Simulink", "Aerospace"],
+          techStack: [
+            { name: "MATLAB & Simulink", percentage: 45, color: "from-orange-500 to-amber-500", role: "Simulación de dinámica de vuelo no lineal en 6-DOF y cinemática de cuaterniones" },
+            { name: "Teoría de Control (PID / LQR / TVC)", percentage: 30, color: "from-cyan-500 to-blue-500", role: "Lazos de control para vectorización de empuje (Gimbal TVC) y estabilización de actitud" },
+            { name: "Física & Dinámica Aerodinámica", percentage: 15, color: "from-purple-500 to-indigo-500", role: "Ecuaciones diferenciales con masa variable, viento cruzado y momentos de inercia" },
+            { name: "C++ & Exportación HIL", percentage: 10, color: "from-emerald-500 to-teal-500", role: "Generación de código embebido para validación Hardware-In-The-Loop en tiempo real" },
+          ],
           quickInsightDesc: "Derivación analítica y estabilización usando Ecuaciones de Newton-Euler",
           quickInsight: [
             { icon: "Plane", title: "Cinemática", detail: "Matrices de Rotación de Euler y Cuaterniones" },
@@ -238,6 +268,12 @@ export const content = {
           category: "hardware",
           desc: "Diseño y programación bare-metal de un controlador de vuelo para Quadcopter usando una arquitectura de software estratégica: Assembly para el manejo de registros de interrupciones y C++ para el lazo de estabilización PID.",
           tags: ["C++", "Assembly", "ATmega328P", "Flight Controller", "PID", "Hardware"],
+          techStack: [
+            { name: "C++ Embebido & OOP", percentage: 40, color: "from-blue-500 to-indigo-500", role: "Arquitectura de vuelo modular, bucle de control determinístico y rutinas de seguridad (Failsafe)" },
+            { name: "AVR Assembly / Pure ASM", percentage: 30, color: "from-purple-500 to-pink-500", role: "Rutinas ISR de latencia ultra baja, configuración de Timers de 16 bits y generación PWM precisa" },
+            { name: "Hardware & Protocolos (I2C/UART)", percentage: 20, color: "from-cyan-500 to-teal-500", role: "Comunicación directa con MPU6050, procesamiento de señales y telemetría de vuelo" },
+            { name: "Fusión Sensorial & Motor Mixing", percentage: 10, color: "from-amber-500 to-orange-500", role: "Filtro complementario para estimación de actitud y matrices de distribución a motores" },
+          ],
           quickInsightDesc: "Desarrollo desde cero operando sobre los registros del microcontrolador sin usar abstracciones ni librerías de vuelo comerciales.",
           quickInsight: [
             { icon: "Cpu", title: "Capa Bajo Nivel", detail: "Assembly: Generación PWM exacta y lectura UART" },
@@ -370,6 +406,12 @@ export const content = {
           category: "data",
           desc: "Web platform with in-browser AI that forecasts dengue evolution district by district across the Bucaramanga Metropolitan Area (Colombia). Gradient Boosting model exported to ONNX (372 KB) running 100% in WebAssembly, no backend. Built for Colombia's national Datos al Ecosistema 2026 competition.",
           tags: ["React", "TypeScript", "Python", "ONNX", "scikit-learn", "ECharts", "Vite", "WebAssembly"],
+          techStack: [
+            { name: "React & TypeScript", percentage: 40, color: "from-cyan-500 to-blue-500", role: "Reactive SPA architecture, interactive UI components, Zustand state and bilingual i18n" },
+            { name: "Python & scikit-learn", percentage: 30, color: "from-blue-500 to-indigo-500", role: "SIVIGILA/IDEAM open data ETL pipelines, feature engineering and Gradient Boosting training" },
+            { name: "ONNX & WebAssembly", percentage: 20, color: "from-purple-500 to-pink-500", role: "100% in-browser recursive autoregressive inference (WASM CPU), zero latency, no server" },
+            { name: "Apache ECharts & GeoJSON", percentage: 10, color: "from-amber-500 to-orange-500", role: "District choropleth maps, historical endemic channels and population pyramids" },
+          ],
           quickInsightDesc: "Full pipeline: open data → ML model trained in Python → ONNX export → recursive autoregressive inference in the browser → prioritized vector control recommendations + economic impact in COP.",
           quickInsight: [
             { icon: "Database", title: "Python Pipelines", detail: "28,626 SIVIGILA cases + IDEAM/CDMB climate → 10,267-row table (16 features)" },
@@ -400,6 +442,12 @@ export const content = {
           category: "data",
           desc: "Scalable cloud architecture on GCP to process affiliate data for a healthcare network with 11 branches in Santander. Engineered event-driven ETL pipelines to integrate medical records and centralize data.",
           tags: ["GCP", "BigQuery", "Python", "Pandas", "Event-Driven ETL"],
+          techStack: [
+            { name: "Python & Pandas", percentage: 40, color: "from-blue-500 to-cyan-500", role: "Raw data cleaning, normalization, family core detection algorithms and life stage classification" },
+            { name: "Google BigQuery & SQL", percentage: 30, color: "from-indigo-500 to-blue-600", role: "Columnar data modeling, optimized analytical queries and Single Source of Truth consolidation" },
+            { name: "Google Cloud Platform (GCP)", percentage: 20, color: "from-emerald-500 to-teal-500", role: "Cloud Storage, event-driven Cloud Functions and automated serverless pipelines" },
+            { name: "Power BI & Analytics", percentage: 10, color: "from-amber-500 to-orange-500", role: "Executive analytics dashboards using DAX and Power Query for population tracking" },
+          ],
           quickInsightDesc: "Affiliate data fluctuates constantly. This pipeline isn't one-way; it feeds back every month to keep the population up to date, automatically detecting new family cores and updating life stages.",
           quickInsight: [
             { icon: "Cloud", title: "Cloud Storage", detail: "Event trigger & Raw report extraction" },
@@ -424,6 +472,12 @@ export const content = {
           category: "data",
           desc: "Complete mathematical development of a generic Deep Neural Network (L-layers) programmed entirely from scratch using only pure Numpy, without external frameworks.",
           tags: ["Python", "Numpy", "Deep Learning", "Mathematics", "Computer Vision"],
+          techStack: [
+            { name: "Python & Vectorized NumPy", percentage: 45, color: "from-blue-500 to-indigo-500", role: "Vectorized linear algebra and matrix operations implemented entirely from scratch" },
+            { name: "Backprop & Neural Architecture", percentage: 30, color: "from-purple-500 to-pink-500", role: "Analytical gradient derivations, custom optimizers (Adam, RMSprop, SGD) and modular layers" },
+            { name: "ML Theory & Regularization", percentage: 15, color: "from-cyan-500 to-teal-500", role: "L2 Regularization, stochastic Dropout, He/Xavier weight initialization and cross-validation" },
+            { name: "Matplotlib & Visualization", percentage: 10, color: "from-amber-500 to-orange-500", role: "Colored 2D decision boundary rendering and cost function convergence surfaces" },
+          ],
           quickInsightDesc: "Manual construction of Feedforward Architecture, Backpropagation, and Multivariable Cost Functions.",
           quickInsight: [
             { icon: "Database", title: "Preparation", detail: "Initial logistic classification on Planar Data" },
@@ -452,6 +506,12 @@ export const content = {
           category: "data",
           desc: "Artificial Intelligence prototype for real-time recognition of the static alphabet of Colombian Sign Language (LSC) using computer vision.",
           tags: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Keras"],
+          techStack: [
+            { name: "TensorFlow & Keras (LSTM)", percentage: 40, color: "from-orange-500 to-red-500", role: "Recurrent neural networks for capturing temporal dependencies in dynamic sign gestures" },
+            { name: "Python & OpenCV", percentage: 30, color: "from-blue-500 to-cyan-500", role: "Real-time video capture, spatial bounding-box normalization and temporal data augmentation" },
+            { name: "MediaPipe Hands & Pose", percentage: 20, color: "from-teal-500 to-emerald-500", role: "Real-time 3D landmark extraction for 21 hand keypoints per video frame" },
+            { name: "JavaScript & Web Demo", percentage: 10, color: "from-yellow-500 to-amber-500", role: "Interactive in-browser webcam integration for live client-side gesture recognition" },
+          ],
           quickInsightDesc: "Frame-by-frame video processing and classification using Neural Networks",
           quickInsight: [
             { icon: "Camera", title: "OpenCV", detail: "Real-time video feed capture" },
@@ -476,6 +536,12 @@ export const content = {
           category: "robotics",
           desc: "Development and simulation of the complete mathematical model (6 Degrees of Freedom) and control algorithms for rocket flight stabilization.",
           tags: ["Mathematica", "Control Theory", "Non-linear Dynamics", "Simulink", "Aerospace"],
+          techStack: [
+            { name: "MATLAB & Simulink", percentage: 45, color: "from-orange-500 to-amber-500", role: "Nonlinear 6-DOF flight dynamics simulation and quaternion attitude kinematics" },
+            { name: "Control Theory (PID / LQR / TVC)", percentage: 30, color: "from-cyan-500 to-blue-500", role: "Closed-loop control for Thrust Vector Control (gimbal TVC) and vertical stabilization" },
+            { name: "Physics & Aerodynamic Drag", percentage: 15, color: "from-purple-500 to-indigo-500", role: "Variable-mass differential equations, crosswind disturbance and moment of inertia tensors" },
+            { name: "C++ & HIL Export", percentage: 10, color: "from-emerald-500 to-teal-500", role: "Embedded code generation for real-time Hardware-In-The-Loop simulation and verification" },
+          ],
           quickInsightDesc: "Analytical derivation and stabilization using Newton-Euler equations",
           quickInsight: [
             { icon: "Plane", title: "Kinematics", detail: "Euler Rotation Matrices and Quaternions" },
@@ -503,6 +569,12 @@ export const content = {
           category: "hardware",
           desc: "Bare-metal design and programming of a Quadcopter flight controller using a strategic dual-stack software architecture: Assembly for interrupt registers management and C++ for the PID stabilization loop.",
           tags: ["C++", "Assembly", "ATmega328P", "Flight Controller", "PID", "Hardware"],
+          techStack: [
+            { name: "Embedded C++ & OOP", percentage: 40, color: "from-blue-500 to-indigo-500", role: "Modular flight architecture, deterministic rate control loop and safety failsafe routines" },
+            { name: "AVR Assembly / Pure ASM", percentage: 30, color: "from-purple-500 to-pink-500", role: "Ultra low-latency ISRs, 16-bit hardware timer setup and cycle-accurate PWM generation" },
+            { name: "Hardware & Protocols (I2C/UART)", percentage: 20, color: "from-cyan-500 to-teal-500", role: "Direct MPU6050 register communication, signal processing and telemetry transmission" },
+            { name: "Sensor Fusion & Motor Mixing", percentage: 10, color: "from-amber-500 to-orange-500", role: "Complementary filter for attitude estimation and brushless motor power distribution matrix" },
+          ],
           quickInsightDesc: "Scratch-built development operating directly on microcontroller registers without commercial flight abstractions.",
           quickInsight: [
             { icon: "Cpu", title: "Low Level Layer", detail: "Assembly: Precise PWM generation & UART reading" },
@@ -635,6 +707,12 @@ export const content = {
           category: "data",
           desc: "Plateforme web avec IA embarquée dans le navigateur qui anticipe l'évolution de la dengue quartier par quartier dans la Zone Métropolitaine de Bucaramanga (Colombie). Modèle Gradient Boosting exporté en ONNX (372 Ko) exécuté à 100% en WebAssembly, sans backend. Concours national Datos al Ecosistema 2026.",
           tags: ["React", "TypeScript", "Python", "ONNX", "scikit-learn", "ECharts", "Vite", "WebAssembly"],
+          techStack: [
+            { name: "React & TypeScript", percentage: 40, color: "from-cyan-500 to-blue-500", role: "Architecture SPA réactive, composants interactifs, gestion d état Zustand et i18n" },
+            { name: "Python & scikit-learn", percentage: 30, color: "from-blue-500 to-indigo-500", role: "Pipelines ETL SIVIGILA/IDEAM, ingénierie des caractéristiques et entraînement Gradient Boosting" },
+            { name: "ONNX & WebAssembly", percentage: 20, color: "from-purple-500 to-pink-500", role: "Inférence autorégressive récursive 100% dans le navigateur (CPU WASM), sans serveur" },
+            { name: "Apache ECharts & GeoJSON", percentage: 10, color: "from-amber-500 to-orange-500", role: "Cartes choro-plèthes par quartier, canal endémique historique et pyramides des âges" },
+          ],
           quickInsightDesc: "Pipeline complet : données ouvertes → modèle ML entraîné en Python → export ONNX → inférence autorégressive récursive dans le navigateur → recommandations de contrôle vectoriel + impact économique en COP.",
           quickInsight: [
             { icon: "Database", title: "Pipelines Python", detail: "28 626 cas SIVIGILA + climat IDEAM/CDMB → table 10 267 lignes (16 features)" },
@@ -665,6 +743,12 @@ export const content = {
           category: "data",
           desc: "Architecture cloud évolutive sur GCP pour traiter les données des affiliés d'un réseau de santé avec 11 succursales à Santander. Création de pipelines ETL basés sur des événements pour centraliser les données.",
           tags: ["GCP", "BigQuery", "Python", "Pandas", "Event-Driven ETL"],
+          techStack: [
+            { name: "Python & Pandas", percentage: 40, color: "from-blue-500 to-cyan-500", role: "Nettoyage et normalisation des données, détection des noyaux familiaux et étapes de vie" },
+            { name: "Google BigQuery & SQL", percentage: 30, color: "from-indigo-500 to-blue-600", role: "Modélisation en colonnes, requêtes analytiques optimisées et Source Unique de Vérité" },
+            { name: "Google Cloud Platform (GCP)", percentage: 20, color: "from-emerald-500 to-teal-500", role: "Cloud Storage, Cloud Functions orientées événements et pipelines automatisés" },
+            { name: "Power BI & Analytics", percentage: 10, color: "from-amber-500 to-orange-500", role: "Tableaux de bord décisionnels avec DAX et Power Query pour le suivi de population" },
+          ],
           quickInsightDesc: "Les données des affiliés fluctuent constamment. Ce pipeline n'est pas unidirectionnel ; il se réalimente chaque mois pour maintenir la population à jour, détectant automatiquement de nouveaux noyaux familiaux et modifiant les étapes de vie.",
           quickInsight: [
             { icon: "Cloud", title: "Cloud Storage", detail: "Déclencheur d'événement et extraction brute" },
@@ -688,6 +772,12 @@ export const content = {
           category: "data",
           desc: "Développement mathématique complet d'un Réseau de Neurones Profond générique (L-layers) programmé entièrement à partir de zéro en utilisant uniquement Numpy pur, sans frameworks externes.",
           tags: ["Python", "Numpy", "Deep Learning", "Mathematics", "Computer Vision"],
+          techStack: [
+            { name: "Python & NumPy Vectorisé", percentage: 45, color: "from-blue-500 to-indigo-500", role: "Algèbre linéaire vectorisée et calcul matriciel implémentés sans frameworks" },
+            { name: "Rétropropagation & Architecture", percentage: 30, color: "from-purple-500 to-pink-500", role: "Calcul analytique des gradients, optimiseurs (Adam, RMSprop, SGD) et couches modulaires" },
+            { name: "Théorie ML & Régularisation", percentage: 15, color: "from-cyan-500 to-teal-500", role: "Régularisation L2, Dropout stochastique, initialisation He/Xavier et validation croisée" },
+            { name: "Matplotlib & Visualisation", percentage: 10, color: "from-amber-500 to-orange-500", role: "Rendu des frontières de décision 2D colorées et surfaces de convergence du coût" },
+          ],
           quickInsightDesc: "Construction manuelle de l'Architecture Feedforward, de la Rétropropagation et des Fonctions de Coût Multivariables.",
           quickInsight: [
             { icon: "Database", title: "Préparation", detail: "Classification logistique initiale sur Planar Data" },
@@ -716,6 +806,12 @@ export const content = {
           category: "data",
           desc: "Prototype d'Intelligence Artificielle pour la reconnaissance en temps réel de l'alphabet statique de la Langue des Signes Colombienne (LSC) par vision par ordinateur.",
           tags: ["Python", "TensorFlow", "MediaPipe", "OpenCV", "Keras"],
+          techStack: [
+            { name: "TensorFlow & Keras (LSTM)", percentage: 40, color: "from-orange-500 to-red-500", role: "Réseaux neuronaux récurrents pour capturer les dépendances temporelles des gestes" },
+            { name: "Python & OpenCV", percentage: 30, color: "from-blue-500 to-cyan-500", role: "Capture vidéo en temps réel, normalisation spatiale et augmentation de données gestuelles" },
+            { name: "MediaPipe Hands & Pose", percentage: 20, color: "from-teal-500 to-emerald-500", role: "Extraction 3D en temps réel de 21 coordonnées de repères de la main par image" },
+            { name: "JavaScript & Démo Web", percentage: 10, color: "from-yellow-500 to-amber-500", role: "Intégration webcam interactive dans le navigateur pour traduction gestuelle directe" },
+          ],
           quickInsightDesc: "Traitement et classification de la vidéo image par image avec Réseaux Neuronaux",
           quickInsight: [
             { icon: "Camera", title: "OpenCV", detail: "Capture de flux vidéo en direct" },
@@ -740,6 +836,12 @@ export const content = {
           category: "robotics",
           desc: "Développement et simulation du modèle mathématique complet (6 Degrés de Liberté) et des algorithmes de contrôle pour la stabilisation d'une fusée.",
           tags: ["Mathematica", "Control Theory", "Non-linear Dynamics", "Simulink", "Aerospace"],
+          techStack: [
+            { name: "MATLAB & Simulink", percentage: 45, color: "from-orange-500 to-amber-500", role: "Simulation de dynamique de vol non linéaire à 6 DDL et cinématique des quaternions" },
+            { name: "Théorie du Contrôle (PID / TVC)", percentage: 30, color: "from-cyan-500 to-blue-500", role: "Boucles de contrôle pour vectorisation de poussée (TVC) et stabilisation d attitude" },
+            { name: "Physique & Traînée Aérodynamique", percentage: 15, color: "from-purple-500 to-indigo-500", role: "Équations à masse variable, vent de travers et tenseurs d inertie" },
+            { name: "C++ & Exportation HIL", percentage: 10, color: "from-emerald-500 to-teal-500", role: "Génération de code embarqué pour validation Hardware-In-The-Loop en temps réel" },
+          ],
           quickInsightDesc: "Dérivation analytique et stabilisation avec les Équations de Newton-Euler",
           quickInsight: [
             { icon: "Plane", title: "Cinématique", detail: "Matrices de Rotation d'Euler et Quaternions" },
@@ -767,6 +869,12 @@ export const content = {
           category: "hardware",
           desc: "Conception et programmation \"bare-metal\" d'un contrôleur de vol pour Quadcopter utilisant une architecture logicielle double couche : Assembly pour la gestion des interruptions matérielles et C++ pour la boucle de stabilisation PID.",
           tags: ["C++", "Assembly", "ATmega328P", "Flight Controller", "PID", "Hardware"],
+          techStack: [
+            { name: "C++ Embarqué & POO", percentage: 40, color: "from-blue-500 to-indigo-500", role: "Architecture de vol modulaire, boucle de contrôle déterministe et protocoles Failsafe" },
+            { name: "Assembleur AVR / Pure ASM", percentage: 30, color: "from-purple-500 to-pink-500", role: "Routines ISR à ultra-faible latence, configuration de timers 16 bits et génération PWM" },
+            { name: "Matériel & Protocoles (I2C/UART)", percentage: 20, color: "from-cyan-500 to-teal-500", role: "Communication registre directe avec MPU6050, traitement du signal et télémétrie" },
+            { name: "Fusion Sensorielle & Motor Mixing", percentage: 10, color: "from-amber-500 to-orange-500", role: "Filtre complémentaire pour l attitude et matrice de distribution de puissance" },
+          ],
           quickInsightDesc: "Développement natif exploitant directement les registres du microcontrôleur sans bibliothèques commerciales.",
           quickInsight: [
             { icon: "Cpu", title: "Couche Bas Niveau", detail: "Assembly : Génération PWM et signaux UART" },
