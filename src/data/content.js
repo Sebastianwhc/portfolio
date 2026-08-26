@@ -123,7 +123,7 @@ export const content = {
           ],
 
           links: [
-            { type: "demo", url: "https://concursodatos.vercel.app", label: "Ver Demo en Vivo" },
+            { type: "demo", url: "https://concursodatos.vercel.app/simulador", label: "Ver Demo en Vivo" },
             { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "Repo GitHub" }
           ]
         },
@@ -390,7 +390,7 @@ export const content = {
           ],
 
           links: [
-            { type: "demo", url: "https://concursodatos.vercel.app", label: "Live Demo" },
+            { type: "demo", url: "https://concursodatos.vercel.app/simulador", label: "Live Demo" },
             { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "GitHub Repo" }
           ]
         },
@@ -655,7 +655,7 @@ export const content = {
           ],
 
           links: [
-            { type: "demo", url: "https://concursodatos.vercel.app", label: "Démo en Direct" },
+            { type: "demo", url: "https://concursodatos.vercel.app/simulador", label: "Démo en Direct" },
             { type: "github", url: "https://github.com/Sebastianwhc/Concurso_Datos", label: "Repo GitHub" }
           ]
         },
