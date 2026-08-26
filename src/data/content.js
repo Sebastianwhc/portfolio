@@ -651,7 +651,7 @@ export const content = {
           imageCaption: 'Simulateur prédictif de dengue — Carte de risque par quartier',
           gallery: [
             { src: '/images_projects/endemic_channel.png', alt: 'Canal endémique : Cas 2026 sur les bandes historiques 2015–2025 (Succès, Sécurité, Épidémie)', colSpan: true },
-            { src: '/images_projects/geospatial_distribution_dengue.png', alt: 'Distribution géospatiale : Contexte régional de Santander et cas par quartier dans l'AMB', colSpan: true }
+            { src: '/images_projects/geospatial_distribution_dengue.png', alt: "Distribution géospatiale : Contexte régional de Santander et cas par quartier dans l'AMB", colSpan: true }
           ],
 
           links: [
