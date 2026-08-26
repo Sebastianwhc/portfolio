@@ -117,6 +117,10 @@ export const content = {
           ],
           image: '/images_projects/ecosalud-cover.png',
           imageCaption: 'Simulador predictivo de dengue — Mapa de riesgo por comuna',
+          gallery: [
+            { src: '/images_projects/endemic_channel.png', alt: 'Canal endémico: Casos 2026 sobre bandas históricas 2015–2025 (Éxito, Seguridad, Epidemia)', colSpan: true },
+            { src: '/images_projects/geospatial_distribution_dengue.png', alt: 'Distribución geoespacial: Contexto regional de Santander y casos por comuna en el AMB', colSpan: true }
+          ],
 
           links: [
             { type: "demo", url: "https://concursodatos.vercel.app", label: "Ver Demo en Vivo" },
@@ -380,6 +384,10 @@ export const content = {
           ],
           image: '/images_projects/ecosalud-cover.png',
           imageCaption: 'Dengue prediction simulator — District-level risk map',
+          gallery: [
+            { src: '/images_projects/endemic_channel.png', alt: 'Endemic Channel: 2026 cases over 2015–2025 historical percentiles (Success, Safety, Epidemic)', colSpan: true },
+            { src: '/images_projects/geospatial_distribution_dengue.png', alt: 'Geospatial Distribution: Santander regional context and AMB district cases', colSpan: true }
+          ],
 
           links: [
             { type: "demo", url: "https://concursodatos.vercel.app", label: "Live Demo" },
@@ -641,6 +649,10 @@ export const content = {
           ],
           image: '/images_projects/ecosalud-cover.png',
           imageCaption: 'Simulateur prédictif de dengue — Carte de risque par quartier',
+          gallery: [
+            { src: '/images_projects/endemic_channel.png', alt: 'Canal endémique : Cas 2026 sur les bandes historiques 2015–2025 (Succès, Sécurité, Épidémie)', colSpan: true },
+            { src: '/images_projects/geospatial_distribution_dengue.png', alt: 'Distribution géospatiale : Contexte régional de Santander et cas par quartier dans l'AMB', colSpan: true }
+          ],
 
           links: [
             { type: "demo", url: "https://concursodatos.vercel.app", label: "Démo en Direct" },
