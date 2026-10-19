@@ -1,5 +1,5 @@
-/* 1. IMPORTAMOS LA FUENTE (Montserrat y Space Grotesk para tecnología) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Space+Grotesk:wght@300;500;700&display=swap');
+/* 1. IMPORTAMOS LA FUENTE (Inter para todo el sitio) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,9 +11,27 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #000; /* Fondo base negro (detrás de las estrellas) */
-  font-family: 'Montserrat', sans-serif; /* Fuente por defecto */
+  background-color: #020617; /* Mismo tono que el fondo del canvas */
+  font-family: 'Inter', system-ui, sans-serif; /* Fuente por defecto */
   color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Foco visible para navegación con teclado */
+:focus-visible {
+  outline: 2px solid #67c3d3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respetar la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 #root {

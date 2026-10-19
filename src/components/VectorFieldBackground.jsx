@@ -46,26 +46,18 @@ const VectorFieldBackground = () => {
                     const theta = Math.atan2(dy, dx);
                     const effect = Math.max(0, 1 - dist / MAX_DIST);
 
-                    const opacity = 0.2 + 0.8 * effect;
-                    const size = 1 + 2 * effect;
+                    const opacity = 0.08 + 0.3 * effect;
+                    const size = 1 + 0.6 * effect;
 
                     // Desplazar estrella ligeramente hacia el cursor
-                    const dMove = effect * 15;
+                    const dMove = effect * 8;
                     const starX = x + Math.cos(theta) * dMove;
                     const starY = y + Math.sin(theta) * dMove;
 
                     ctx.beginPath();
                     ctx.arc(starX, starY, size, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(6, 182, 212, ${opacity})`;
+                    ctx.fillStyle = `rgba(148, 163, 184, ${opacity})`;
                     ctx.fill();
-
-                    // Resplandor para estrellas más cercanas al cursor
-                    if (effect > 0.2) {
-                        ctx.beginPath();
-                        ctx.arc(starX, starY, size * 2.5, 0, Math.PI * 2);
-                        ctx.fillStyle = `rgba(6, 182, 212, ${opacity * 0.3})`;
-                        ctx.fill();
-                    }
                 }
             }
 
