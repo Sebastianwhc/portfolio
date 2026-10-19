@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowLeft, Github, ExternalLink, PlayCircle, BarChart3, Database, Cloud,
   Cpu, ArrowRight, ArrowDown, RefreshCcw, Camera, Scan, BrainCircuit,
-  Globe, Activity, Zap, MapPin, Code2, Layers, CheckCircle2
+  Globe, Activity, Zap, MapPin, Code2, Layers, CheckCircle2, Plane, Waves, Route
 } from 'lucide-react';
 
 const iconMap = {
@@ -20,7 +20,10 @@ const iconMap = {
   Zap,
   MapPin,
   Code2,
-  Layers
+  Layers,
+  Plane,
+  Waves,
+  Route
 };
 import { content } from './data/content';
 import LscTranslator from './components/LscTranslator';

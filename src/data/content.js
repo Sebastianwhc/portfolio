@@ -261,6 +261,43 @@ export const content = {
             { type: "github", url: "https://github.com/Sebastianwhc/Project-Control-of-6-DOF-of-Quadrotor-kind-Rocket", label: "Repo Simulación" }
           ]
         },
+        {
+          id: "bluerov2-adrc-control",
+          title: "Simulador 3D de Control ADRC para un ROV Submarino (BlueROV2)",
+          category: "robotics",
+          desc: "Proyecto académico en equipo sobre el control avanzado de un vehículo submarino BlueROV2 (modelo 6-GDL + Control por Rechazo Activo de Perturbaciones con observadores GPI). Mi aporte fue la capa de visualización: el equipo analizaba los resultados con gráficas 2D clásicas de control y yo desarrollé un simulador 3D interactivo en MATLAB donde se configura la trayectoria, se ejecuta el modelo de Simulink y se reproduce el ROV en un entorno submarino junto con el empuje de sus 6 propulsores.",
+          tags: ["MATLAB", "Simulink", "3D Visualization", "ADRC", "GPI Observer", "Marine Robotics", "Team Project"],
+          techStack: [
+            { name: "App MATLAB & Visualización 3D", percentage: 40, color: "from-emerald-500 to-teal-500", role: "Mi aporte: interfaz gráfica con escena submarina 3D, ROV orientado en NED, estela, chorros de propulsores y reproducción animada" },
+            { name: "MATLAB & Simulink", percentage: 25, color: "from-orange-500 to-amber-500", role: "Modelo no lineal 6-GDL de Fossen del equipo, ejecutado desde la app con parámetros configurables" },
+            { name: "Control ADRC & Observador GPI", percentage: 20, color: "from-cyan-500 to-blue-500", role: "Controlador GPI por eje + observador de estado extendido diseñados por el equipo; la app expone el ancho de banda ω₀" },
+            { name: "Análisis de Resultados", percentage: 15, color: "from-purple-500 to-indigo-500", role: "Gráficas sincronizadas de posición, orientación, error y empuje con cursor de tiempo enlazado a la escena 3D" },
+          ],
+          quickInsightDesc: "El equipo diseñó el modelo dinámico y el controlador ADRC, y evaluaba los resultados con gráficas 2D. Yo construí el simulador que reúne todo en una sola ventana: configurar → simular → ver al ROV moverse en 3D.",
+          quickInsight: [
+            { icon: "Layers", title: "Configuración", detail: "Waypoints, perturbaciones y ancho de banda del observador desde la interfaz" },
+            { icon: "Cpu", title: "Simulink ADRC", detail: "Ejecuta el modelo 6-GDL del equipo con controlador y observador GPI" },
+            { icon: "Waves", title: "Escena 3D", detail: "Fondo marino, ROV orientado, estela y chorros de los 6 propulsores" },
+            { icon: "Activity", title: "Análisis", detail: "Posición, orientación, error y empujes sincronizados con la animación" }
+          ],
+          metrics: [
+            { label: "Visualización", value: "2D → 3D", desc: "De gráficas clásicas de control a la reproducción animada del ROV" },
+            { label: "Error RMS", value: "5 mm", desc: "Error de posición 3D en la trayectoria de 11 waypoints (máx. 1.6 cm)" },
+            { label: "Grados de Libertad", value: "6 GDL", desc: "x, y, z + roll, pitch, yaw visualizados en tiempo de simulación" }
+          ],
+          image: '/images_projects/rov-cover.gif',
+          imageCaption: 'Mi simulador 3D: seguimiento de una trayectoria helicoidal con ADRC',
+          gallery: [
+            { src: '/images_projects/rov-gui.png', alt: 'Simulador 3D interactivo en MATLAB: trayectoria, perturbaciones y observador configurables', colSpan: true },
+            { src: '/images_projects/rov-tracking.png', alt: 'Seguimiento de referencia en los 6 grados de libertad (SV vs PV)', colSpan: true },
+            { src: '/images_projects/rov-error-thrust.png', alt: 'Error de posición y empuje de los 6 propulsores', colSpan: true },
+            { src: '/images_projects/rov-adrc-scheme.png', alt: 'Esquema de control por rechazo activo de perturbaciones (diseño del equipo)', colSpan: false },
+            { src: '/images_projects/rov-controller.png', alt: 'Simulink: controlador GPI + observador por eje (diseño del equipo)', colSpan: false }
+          ],
+          links: [
+            { type: "github", url: "https://github.com/Sebastianwhc", label: "Ver Código" }
+          ]
+        },
         // --- HARDWARE & CONTROL ---
         {
           id: "hybrid-flight-controller",
@@ -564,6 +601,43 @@ export const content = {
           ]
         },
         {
+          id: "bluerov2-adrc-control",
+          title: "3D ADRC Control Simulator for an Underwater ROV (BlueROV2)",
+          category: "robotics",
+          desc: "Academic team project on advanced control of a BlueROV2 underwater vehicle (6-DOF model + Active Disturbance Rejection Control with GPI observers). My contribution was the visualization layer: the team analyzed results with classic 2D control plots, and I built an interactive 3D MATLAB simulator where you set up the trajectory, run the Simulink model and play back the ROV in an underwater scene alongside the thrust of its 6 thrusters.",
+          tags: ["MATLAB", "Simulink", "3D Visualization", "ADRC", "GPI Observer", "Marine Robotics", "Team Project"],
+          techStack: [
+            { name: "MATLAB App & 3D Visualization", percentage: 40, color: "from-emerald-500 to-teal-500", role: "My contribution: GUI with a 3D underwater scene, NED-oriented ROV, wake trail, thruster jets and animated playback" },
+            { name: "MATLAB & Simulink", percentage: 25, color: "from-orange-500 to-amber-500", role: "The team's nonlinear 6-DOF Fossen model, run from the app with configurable parameters" },
+            { name: "ADRC Control & GPI Observer", percentage: 20, color: "from-cyan-500 to-blue-500", role: "Per-axis GPI controller + extended state observer designed by the team; the app exposes the bandwidth ω₀" },
+            { name: "Results Analysis", percentage: 15, color: "from-purple-500 to-indigo-500", role: "Synchronized position, orientation, error and thrust plots with a time cursor linked to the 3D scene" },
+          ],
+          quickInsightDesc: "The team designed the dynamic model and the ADRC controller, and evaluated results with 2D plots. I built the simulator that brings it all into one window: configure → simulate → watch the ROV move in 3D.",
+          quickInsight: [
+            { icon: "Layers", title: "Setup", detail: "Waypoints, disturbances and observer bandwidth from the interface" },
+            { icon: "Cpu", title: "Simulink ADRC", detail: "Runs the team's 6-DOF model with the GPI controller and observer" },
+            { icon: "Waves", title: "3D Scene", detail: "Seabed, oriented ROV, wake trail and jets from all 6 thrusters" },
+            { icon: "Activity", title: "Analysis", detail: "Position, orientation, error and thrust synced with the animation" }
+          ],
+          metrics: [
+            { label: "Visualization", value: "2D → 3D", desc: "From classic control plots to animated ROV playback" },
+            { label: "RMS Error", value: "5 mm", desc: "3D position error over the 11-waypoint trajectory (max 1.6 cm)" },
+            { label: "Degrees of Freedom", value: "6 DOF", desc: "x, y, z + roll, pitch, yaw visualized over simulation time" }
+          ],
+          image: '/images_projects/rov-cover.gif',
+          imageCaption: 'My 3D simulator: tracking a helical trajectory with ADRC',
+          gallery: [
+            { src: '/images_projects/rov-gui.png', alt: 'Interactive 3D MATLAB simulator: configurable trajectory, disturbances and observer', colSpan: true },
+            { src: '/images_projects/rov-tracking.png', alt: 'Reference tracking across all 6 degrees of freedom (SV vs PV)', colSpan: true },
+            { src: '/images_projects/rov-error-thrust.png', alt: 'Position error and thrust of the 6 thrusters', colSpan: true },
+            { src: '/images_projects/rov-adrc-scheme.png', alt: 'Active disturbance rejection control scheme (team design)', colSpan: false },
+            { src: '/images_projects/rov-controller.png', alt: 'Simulink: per-axis GPI controller + observer (team design)', colSpan: false }
+          ],
+          links: [
+            { type: "github", url: "https://github.com/Sebastianwhc", label: "View Code" }
+          ]
+        },
+        {
           id: "hybrid-flight-controller",
           title: "Hybrid Flight Controller (C++/ASM)",
           category: "hardware",
@@ -861,6 +935,43 @@ export const content = {
           ],
           links: [
             { type: "github", url: "https://github.com/Sebastianwhc/Project-Control-of-6-DOF-of-Quadrotor-kind-Rocket", label: "Repo Simulation" }
+          ]
+        },
+        {
+          id: "bluerov2-adrc-control",
+          title: "Simulateur 3D de Contrôle ADRC pour un ROV Sous-marin (BlueROV2)",
+          category: "robotics",
+          desc: "Projet académique en équipe sur le contrôle avancé d'un véhicule sous-marin BlueROV2 (modèle 6 DDL + Contrôle par Rejet Actif de Perturbations avec observateurs GPI). Ma contribution a été la couche de visualisation : l'équipe analysait les résultats avec des graphiques 2D classiques de contrôle, et j'ai développé un simulateur 3D interactif sous MATLAB qui permet de configurer la trajectoire, d'exécuter le modèle Simulink et de rejouer le ROV dans une scène sous-marine avec la poussée de ses 6 propulseurs.",
+          tags: ["MATLAB", "Simulink", "3D Visualization", "ADRC", "GPI Observer", "Marine Robotics", "Team Project"],
+          techStack: [
+            { name: "App MATLAB & Visualisation 3D", percentage: 40, color: "from-emerald-500 to-teal-500", role: "Ma contribution : interface avec scène sous-marine 3D, ROV orienté en NED, sillage, jets des propulseurs et lecture animée" },
+            { name: "MATLAB & Simulink", percentage: 25, color: "from-orange-500 to-amber-500", role: "Modèle non linéaire de Fossen à 6 DDL de l'équipe, exécuté depuis l'app avec des paramètres configurables" },
+            { name: "Contrôle ADRC & Observateur GPI", percentage: 20, color: "from-cyan-500 to-blue-500", role: "Contrôleur GPI par axe + observateur d'état étendu conçus par l'équipe ; l'app expose la bande passante ω₀" },
+            { name: "Analyse des Résultats", percentage: 15, color: "from-purple-500 to-indigo-500", role: "Graphiques synchronisés de position, orientation, erreur et poussée avec un curseur de temps lié à la scène 3D" },
+          ],
+          quickInsightDesc: "L'équipe a conçu le modèle dynamique et le contrôleur ADRC, et évaluait les résultats avec des graphiques 2D. J'ai construit le simulateur qui réunit tout dans une seule fenêtre : configurer → simuler → voir le ROV évoluer en 3D.",
+          quickInsight: [
+            { icon: "Layers", title: "Configuration", detail: "Waypoints, perturbations et bande passante de l'observateur depuis l'interface" },
+            { icon: "Cpu", title: "Simulink ADRC", detail: "Exécute le modèle 6 DDL de l'équipe avec contrôleur et observateur GPI" },
+            { icon: "Waves", title: "Scène 3D", detail: "Fond marin, ROV orienté, sillage et jets des 6 propulseurs" },
+            { icon: "Activity", title: "Analyse", detail: "Position, orientation, erreur et poussées synchronisées avec l'animation" }
+          ],
+          metrics: [
+            { label: "Visualisation", value: "2D → 3D", desc: "Des graphiques classiques de contrôle à la lecture animée du ROV" },
+            { label: "Erreur RMS", value: "5 mm", desc: "Erreur de position 3D sur la trajectoire de 11 waypoints (max. 1,6 cm)" },
+            { label: "Degrés de Liberté", value: "6 DDL", desc: "x, y, z + roulis, tangage, lacet visualisés au fil de la simulation" }
+          ],
+          image: '/images_projects/rov-cover.gif',
+          imageCaption: "Mon simulateur 3D : suivi d'une trajectoire hélicoïdale avec ADRC",
+          gallery: [
+            { src: '/images_projects/rov-gui.png', alt: 'Simulateur 3D interactif sous MATLAB : trajectoire, perturbations et observateur configurables', colSpan: true },
+            { src: '/images_projects/rov-tracking.png', alt: 'Suivi de référence sur les 6 degrés de liberté (SV vs PV)', colSpan: true },
+            { src: '/images_projects/rov-error-thrust.png', alt: 'Erreur de position et poussée des 6 propulseurs', colSpan: true },
+            { src: '/images_projects/rov-adrc-scheme.png', alt: "Schéma de contrôle par rejet actif de perturbations (conception de l'équipe)", colSpan: false },
+            { src: '/images_projects/rov-controller.png', alt: "Simulink : contrôleur GPI + observateur par axe (conception de l'équipe)", colSpan: false }
+          ],
+          links: [
+            { type: "github", url: "https://github.com/Sebastianwhc", label: "Voir le Code" }
           ]
         },
         {
