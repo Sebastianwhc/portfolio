@@ -19,7 +19,7 @@ export const content = {
     },
     about: {
       title: "Ingeniería Global",
-      p1: "Soy Ingeniero Mecatrónico y Físico, actualmente finalizando un Máster en Ingeniería Aeroespacial en IPSA (París). Mi perfil combina el rigor científico con la eficiencia ingenieril.",
+      p1: "Soy Ingeniero Mecatrónico y Físico, investigador de maestría en la UIS, donde estudio la latencia del hardware embebido de control de vuelo para navegación sin GNSS, tras cursar estudios de posgrado aeroespaciales en IPSA (París). Mi perfil combina el rigor científico con la eficiencia ingenieril.",
       p2: "Mi experiencia abarca desde la automatización industrial y robótica hasta el desarrollo de pipelines de datos en la nube y modelos de Deep Learning. Busco resolver problemas donde el hardware, el software y la física convergen.",
       stats: [
         { value: "Mecatrónica", label: "Base Ingenieril" },
@@ -32,14 +32,22 @@ export const content = {
       jobs: [
         {
           id: 1,
-          role: "Data Engineer",
-          company: "Clinique FOSCAL",
-          period: "2025 - Presente",
-          location: "Bucaramanga, Colombia",
-          desc: "Diseño y optimización de flujos de datos médicos masivos. Desarrollo de pipelines en Python y SQL sobre Google Cloud (BigQuery) para la toma de decisiones estratégicas."
+          role: "Data Specialist",
+          company: "TP",
+          period: "Jul - Ago 2026",
+          location: "Remoto, Colombia",
+          desc: "Flujos SQL complejos (PostgreSQL, SQL Server) para reportes y toma de decisiones de negocio."
         },
         {
           id: 2,
+          role: "Data Scientist / Data Engineer",
+          company: "Clínica FOSCAL",
+          period: "Ene - Ago 2024",
+          location: "Bucaramanga, Colombia",
+          desc: "Modelos de ML predictivo para pronóstico epidemiológico y ETL automatizado (Python, Airflow, GCP) sobre más de 15 sistemas, reduciendo procesos de días a minutos."
+        },
+        {
+          id: 3,
           role: "Data Analyst",
           company: "GRUPO GEA",
           period: "2024",
@@ -47,12 +55,12 @@ export const content = {
           desc: "Análisis de grandes volúmenes de datos para decisiones de ventas e inventarios. Automatización con Python y reportes dinámicos en Power BI."
         },
         {
-          id: 3,
-          role: "Junior Data Analyst",
+          id: 4,
+          role: "Data Analyst / Data Engineer (Práctica)",
           company: "KUSHKI S.A.S",
-          period: "2023",
+          period: "Abr - Sep 2023",
           location: "Bogotá, Colombia",
-          desc: "Gestión de bases de datos para KPIs comerciales. Implementación de modelos predictivos de IA para estimar rendimiento de ventas."
+          desc: "Modelos de ML y análisis sobre 100K–1M+ transacciones de pago diarias para identificar puntos de abandono en la conversión."
         }
       ]
     },
@@ -60,21 +68,27 @@ export const content = {
       title: "Formación de Élite",
       schools: [
         {
-          degree: "Máster en Ingeniería Aeronáutica",
+          degree: "Maestría (investigación) — en curso",
+          school: "Universidad Industrial de Santander",
+          year: "Actual",
+          loc: "Colombia"
+        },
+        {
+          degree: "Ingeniería Aeroespacial — Intercambio de posgrado",
           school: "IPSA - Institut Polytechnique des Sciences Avancées",
-          year: "2024 - 2025",
+          year: "Jul - Dic 2025",
           loc: "París, Francia"
         },
         {
           degree: "Ingeniería Mecatrónica",
           school: "Universidad Santo Tomás",
-          year: "2019 - 2023",
+          year: "2026",
           loc: "Colombia"
         },
         {
           degree: "Física",
           school: "Universidad Industrial de Santander",
-          year: "2019 - 2023",
+          year: "2026",
           loc: "Colombia"
         }
       ],
@@ -360,7 +374,7 @@ export const content = {
     },
     about: {
       title: "Global Engineering",
-      p1: "I am a Mechatronics Engineer and Physicist, currently finishing a Master's in Aeronautical Engineering at IPSA (Paris). My profile combines scientific rigor with engineering efficiency.",
+      p1: "I am a Mechatronics Engineer and Physicist, currently an MSc researcher at UIS studying embedded flight-control latency for GNSS-denied navigation, after graduate aerospace studies at IPSA (Paris). My profile combines scientific rigor with engineering efficiency.",
       p2: "My experience spans from industrial automation and robotics to cloud data pipelines and Deep Learning models. I aim to solve problems where hardware, software, and physics converge.",
       stats: [
         { value: "Mechatronics", label: "Eng. Core" },
@@ -373,14 +387,22 @@ export const content = {
       jobs: [
         {
           id: 1,
-          role: "Data Engineer",
-          company: "Clinique FOSCAL",
-          period: "2025 - Present",
-          location: "Bucaramanga, Colombia",
-          desc: "Design and optimization of massive medical data flows. Pipeline development in Python and SQL on Google Cloud (BigQuery) for strategic decision making."
+          role: "Data Specialist",
+          company: "TP",
+          period: "Jul - Aug 2026",
+          location: "Remote, Colombia",
+          desc: "Complex SQL workflows (PostgreSQL, SQL Server) for reporting and business decisions."
         },
         {
           id: 2,
+          role: "Data Scientist / Data Engineer",
+          company: "Clínica FOSCAL",
+          period: "Jan - Aug 2024",
+          location: "Bucaramanga, Colombia",
+          desc: "Predictive ML for epidemiological forecasting and automated ETL (Python, Airflow, GCP) across 15+ systems, cutting runs from days to minutes."
+        },
+        {
+          id: 3,
           role: "Data Analyst",
           company: "GRUPO GEA",
           period: "2024",
@@ -388,12 +410,12 @@ export const content = {
           desc: "Analysis of large datasets for sales and inventory decisions. Automation with Python and dynamic reporting in Power BI."
         },
         {
-          id: 3,
-          role: "Junior Data Analyst",
+          id: 4,
+          role: "Data Analyst / Data Engineer Intern",
           company: "KUSHKI S.A.S",
-          period: "2023",
+          period: "Apr - Sep 2023",
           location: "Bogotá, Colombia",
-          desc: "Database management for commercial KPIs. Implementation of AI predictive models to estimate sales performance."
+          desc: "ML models and analyses on 100K–1M+ daily payment transactions to find conversion drop-off points."
         }
       ]
     },
@@ -401,21 +423,27 @@ export const content = {
       title: "Elite Education",
       schools: [
         {
-          degree: "Master in Aeronautical Engineering",
-          school: "IPSA - Institut Polytechnique des Sciences Avancées",
-          year: "2024 - 2025",
-          loc: "Paris, France"
-        },
-        {
-          degree: "Mechatronic Engineering",
-          school: "Universidad Santo Tomás",
-          year: "2019 - 2023",
+          degree: "MSc (research) — in progress",
+          school: "Universidad Industrial de Santander",
+          year: "Current",
           loc: "Colombia"
         },
         {
-          degree: "Physics",
+          degree: "Aerospace Engineering — Graduate Exchange",
+          school: "IPSA - Institut Polytechnique des Sciences Avancées",
+          year: "Jul - Dec 2025",
+          loc: "Paris, France"
+        },
+        {
+          degree: "BEng Mechatronics Engineering",
+          school: "Universidad Santo Tomás",
+          year: "2026",
+          loc: "Colombia"
+        },
+        {
+          degree: "BSc Physics",
           school: "Universidad Industrial de Santander",
-          year: "2019 - 2023",
+          year: "2026",
           loc: "Colombia"
         }
       ],
@@ -698,7 +726,7 @@ export const content = {
     },
     about: {
       title: "Ingénierie Globale",
-      p1: "Je suis ingénieur mécatronique et physicien, terminant actuellement un Master en ingénierie aéronautique à l'IPSA (Paris). Mon profil allie rigueur scientifique et efficacité technique.",
+      p1: "Je suis ingénieur mécatronique et physicien, actuellement chercheur en master à l'UIS sur la latence du matériel embarqué de contrôle de vol pour la navigation sans GNSS, après des études aérospatiales de troisième cycle à l'IPSA (Paris). Mon profil allie rigueur scientifique et efficacité technique.",
       p2: "Mon expérience va de l'automatisation industrielle et la robotique aux pipelines de données cloud et modèles de Deep Learning. Je cherche à résoudre des problèmes où matériel, logiciel et physique convergent.",
       stats: [
         { value: "Mécatronique", label: "Socle Ing." },
@@ -711,14 +739,22 @@ export const content = {
       jobs: [
         {
           id: 1,
-          role: "Data Engineer",
-          company: "Clinique FOSCAL",
-          period: "2025 - Présent",
-          location: "Bucaramanga, Colombie",
-          desc: "Conception et optimisation de flux de données médicales massives. Développement de pipelines en Python et SQL sur Google Cloud (BigQuery)."
+          role: "Data Specialist",
+          company: "TP",
+          period: "Juil. - Août 2026",
+          location: "À distance, Colombie",
+          desc: "Workflows SQL complexes (PostgreSQL, SQL Server) pour le reporting et les décisions métier."
         },
         {
           id: 2,
+          role: "Data Scientist / Data Engineer",
+          company: "Clínica FOSCAL",
+          period: "Janv. - Août 2024",
+          location: "Bucaramanga, Colombie",
+          desc: "ML prédictif pour la prévision épidémiologique et ETL automatisé (Python, Airflow, GCP) sur plus de 15 systèmes, réduisant les traitements de plusieurs jours à quelques minutes."
+        },
+        {
+          id: 3,
           role: "Data Analyst",
           company: "GRUPO GEA",
           period: "2024",
@@ -726,12 +762,12 @@ export const content = {
           desc: "Analyse de grands ensembles de données pour les décisions de vente et d'inventaire. Automatisation avec Python et reporting dynamique dans Power BI."
         },
         {
-          id: 3,
-          role: "Junior Data Analyst",
+          id: 4,
+          role: "Data Analyst / Data Engineer (Stage)",
           company: "KUSHKI S.A.S",
-          period: "2023",
+          period: "Avr. - Sept. 2023",
           location: "Bogotá, Colombie",
-          desc: "Gestion de bases de données pour les KPI commerciaux. Mise en place de modèles prédictifs d'IA pour estimer les performances."
+          desc: "Modèles de ML et analyses sur 100K–1M+ transactions de paiement quotidiennes pour identifier les points d'abandon de conversion."
         }
       ]
     },
@@ -739,21 +775,27 @@ export const content = {
       title: "Formation d'Élite",
       schools: [
         {
-          degree: "Master en Ingénierie Aéronautique",
+          degree: "Master (recherche) — en cours",
+          school: "Universidad Industrial de Santander",
+          year: "Actuel",
+          loc: "Colombie"
+        },
+        {
+          degree: "Ingénierie Aérospatiale — Échange de troisième cycle",
           school: "IPSA - Institut Polytechnique des Sciences Avancées",
-          year: "2024 - 2025",
+          year: "Juil. - Déc. 2025",
           loc: "Paris, France"
         },
         {
           degree: "Ingénierie Mécatronique",
           school: "Universidad Santo Tomás",
-          year: "2019 - 2023",
+          year: "2026",
           loc: "Colombie"
         },
         {
           degree: "Physique",
           school: "Universidad Industrial de Santander",
-          year: "2019 - 2023",
+          year: "2026",
           loc: "Colombie"
         }
       ],
